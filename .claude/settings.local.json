@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(python3 -m pip install playwright playwright-stealth curl-cffi pandas python-dotenv beautifulsoup4 lxml)",
+      "Bash(python3 -m venv .venv)",
+      "Bash(.venv/bin/pip install:*)",
+      "Bash(.venv/bin/playwright install:*)",
+      "Bash(.venv/bin/python3 -c \"from playwright.async_api import async_playwright; from playwright_stealth import stealth_async; from parsers.search import parse_listings; print\\(''imports OK''\\)\")",
+      "Bash(.venv/bin/python3 -c \"import playwright_stealth; print\\(dir\\(playwright_stealth\\)\\)\")",
+      "Bash(.venv/bin/python3 -c \"from playwright_stealth import Stealth; help\\(Stealth.__init__\\)\")",
+      "Bash(.venv/bin/python3 -c \":*)",
+      "Bash(.venv/bin/python3 -m py_compile scraper.py browser.py models.py parsers/search.py parsers/detail.py parsers/estimate.py)",
+      "Bash(.venv/bin/python3 scraper.py --url \"https://www.zoopla.co.uk/for-sale/houses/kt2-6rl/?baths_min=1&beds_min=3&is_auction=false&is_retirement_home=false&is_shared_ownership=false&price_max=1500000&property_sub_type=semi_detached&property_sub_type=detached&property_sub_type=terraced&property_sub_type=bungalow&q=KT2%206RL&radius=0.25&search_source=for-sale&tenure=freehold\" --max-properties 1 --save-samples --no-headless --verbose)",
+      "Bash(.venv/bin/python3 -:*)",
+      "Bash(.venv/bin/python3 scraper.py --url \"https://www.zoopla.co.uk/for-sale/houses/kt2-6rl/?baths_min=1&beds_min=3&is_auction=false&is_retirement_home=false&is_shared_ownership=false&price_max=1500000&property_sub_type=semi_detached&property_sub_type=detached&property_sub_type=terraced&property_sub_type=bungalow&q=KT2%206RL&radius=0.25&search_source=for-sale&tenure=freehold\" --max-pages 1 --no-headless --verbose)"
+    ]
+  }
+}
