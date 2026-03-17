@@ -70,6 +70,42 @@ def save_sample(name: str, data, force: bool = False):
     logger.info("Saved sample → %s", path)
 
 
+def load_existing(output_path: Path) -> dict[str, dict]:
+    """Load existing CSV into a dict keyed by property_id."""
+    csv_path = output_path.with_suffix(".csv")
+    if not csv_path.exists():
+        return {}
+    df = pd.read_csv(csv_path, dtype=str)
+    # Convert numeric-ish columns back
+    int_cols = ["listing_price", "beds", "baths", "estimate_price", "estimate_low", "estimate_high"]
+    float_cols = ["latitude", "longitude"]
+    for col in int_cols:
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce").astype("Int64")
+    for col in float_cols:
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+    records = df.where(pd.notna(df), None).to_dict(orient="records")
+    result = {}
+    for r in records:
+        pid = str(r.get("property_id", ""))
+        if pid:
+            # Convert Int64 → plain int/None
+            for col in int_cols:
+                v = r.get(col)
+                r[col] = int(v) if v is not None else None
+            result[pid] = r
+    logger.info("Loaded %d existing properties from %s", len(result), csv_path)
+    return result
+
+
+# Fields that come from the search page that can meaningfully change between runs.
+# NOTE: address is intentionally excluded — the detail page gives the more complete
+# version (with door number); we never want to overwrite it with the search-page
+# short form.
+_SEARCH_FIELDS = {"listing_price", "beds", "baths", "latitude", "longitude"}
+
+
 def save_results(properties: list[Property], output_path: Path):
     """Save results as JSON and CSV."""
     output_path.parent.mkdir(exist_ok=True)
@@ -161,7 +197,17 @@ async def scrape(
     headless: bool = True,
     max_properties: Optional[int] = None,
 ):
-    properties: list[Property] = []
+    # Load any previously scraped records so we can skip detail/estimate pages
+    existing: dict[str, dict] = load_existing(output_path)
+
+    # We'll build an ordered dict: property_id → Property, seeded with existing
+    seen: dict[str, Property] = {
+        pid: Property(**{k: v for k, v in rec.items() if hasattr(Property, k) or k in Property.__dataclass_fields__})
+        for pid, rec in existing.items()
+    }
+    # Track which IDs appeared in this search run (to preserve ordering: new ones first)
+    seen_in_run: list[str] = []
+
     first_detail = True
     first_estimate = True
 
@@ -177,50 +223,78 @@ async def scrape(
                 break
 
             for summary in summaries:
-                if max_properties and len(properties) >= max_properties:
+                if max_properties and len(seen_in_run) >= max_properties:
                     break
 
-                prop = Property(**summary)
-                logger.info(
-                    "Processing [%s] %s — £%s",
-                    prop.property_id,
-                    prop.address,
-                    f"{prop.listing_price:,}" if prop.listing_price else "?",
-                )
+                pid = str(summary.get("property_id", ""))
+                if not pid:
+                    continue
 
-                # Stage 2: detail page
-                if prop.detail_url:
-                    detail = await scrape_detail_page(
-                        browser, prop.detail_url, save_samples, first_detail
-                    )
-                    if detail:
-                        first_detail = False
-                        # detail may override address with more complete version
-                        for field, value in detail.items():
-                            if value:  # don't overwrite with empty strings
-                                setattr(prop, field, value)
-
-                # Stage 3: estimate page (skip if no UPRN)
-                if prop.uprn and prop.uprn != "None":
-                    estimates = await scrape_estimate_page(
-                        browser, prop.uprn, save_samples, first_estimate
-                    )
-                    if estimates:
-                        first_estimate = False
-                        for field, value in estimates.items():
-                            setattr(prop, field, value)
+                if pid in existing:
+                    # --- Already scraped: reuse detail+estimate, update search fields if changed ---
+                    prop = seen[pid]
+                    changed_fields = []
+                    for field in _SEARCH_FIELDS:
+                        new_val = summary.get(field)
+                        old_val = getattr(prop, field, None)
+                        if new_val != old_val:
+                            setattr(prop, field, new_val)
+                            changed_fields.append(f"{field}: {old_val!r} → {new_val!r}")
+                    if changed_fields:
+                        logger.info(
+                            "UPDATED  [%s] %s — changes: %s",
+                            pid, prop.address, "; ".join(changed_fields),
+                        )
+                    else:
+                        logger.info(
+                            "SKIPPED  [%s] %s — already in CSV, no changes",
+                            pid, prop.address,
+                        )
                 else:
-                    logger.warning("No UPRN for property %s — skipping estimate", prop.property_id)
+                    # --- New property: full scrape ---
+                    prop = Property(**summary)
+                    logger.info(
+                        "NEW      [%s] %s — £%s",
+                        prop.property_id,
+                        prop.address,
+                        f"{prop.listing_price:,}" if prop.listing_price else "?",
+                    )
 
-                properties.append(prop)
-                logger.info(
-                    "  → estimate £%s (£%s – £%s)",
-                    prop.estimate_price,
-                    prop.estimate_low,
-                    prop.estimate_high,
-                )
+                    # Stage 2: detail page
+                    if prop.detail_url:
+                        detail = await scrape_detail_page(
+                            browser, prop.detail_url, save_samples, first_detail
+                        )
+                        if detail:
+                            first_detail = False
+                            for field, value in detail.items():
+                                if value:
+                                    setattr(prop, field, value)
 
-            if max_properties and len(properties) >= max_properties:
+                    # Stage 3: estimate page (skip if no UPRN)
+                    if prop.uprn and prop.uprn != "None":
+                        estimates = await scrape_estimate_page(
+                            browser, prop.uprn, save_samples, first_estimate
+                        )
+                        if estimates:
+                            first_estimate = False
+                            for field, value in estimates.items():
+                                setattr(prop, field, value)
+                    else:
+                        logger.warning("No UPRN for property %s — skipping estimate", prop.property_id)
+
+                    logger.info(
+                        "  → estimate £%s (£%s – £%s)",
+                        prop.estimate_price,
+                        prop.estimate_low,
+                        prop.estimate_high,
+                    )
+                    seen[pid] = prop
+
+                if pid not in seen_in_run:
+                    seen_in_run.append(pid)
+
+            if max_properties and len(seen_in_run) >= max_properties:
                 logger.info("Reached max_properties=%d, stopping", max_properties)
                 break
 
@@ -229,8 +303,20 @@ async def scrape(
                 break
             page_num += 1
 
-    save_results(properties, output_path)
-    return properties
+    # Output: properties found in this run first, then any existing ones not in this search
+    run_props = [seen[pid] for pid in seen_in_run if pid in seen]
+    extra_props = [seen[pid] for pid in existing if pid not in seen_in_run]
+    all_props = run_props + extra_props
+
+    stats_new = sum(1 for pid in seen_in_run if pid not in existing)
+    stats_updated = sum(1 for pid in seen_in_run if pid in existing)
+    logger.info(
+        "Run summary: %d new, %d existing (%d carried from previous runs)",
+        stats_new, stats_updated, len(extra_props),
+    )
+
+    save_results(all_props, output_path)
+    return all_props
 
 
 # ---------------------------------------------------------------------------
