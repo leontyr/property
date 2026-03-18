@@ -1,75 +1,116 @@
 """
-Google Maps Distance Matrix commute enrichment.
+Google Maps commute enrichment using the Routes API v2.
 
-Calls the Distance Matrix API in batches (50 origins × 2 destinations = 100 elements
-per request, the API maximum). Two separate requests are made — one per destination —
-because the target arrival times differ.
+Uses Routes API v2 (computeRoutes) with computeAlternativeRoutes=true so all
+available transit routes are returned and the shortest journey time is selected.
+This consistently finds faster options than Distance Matrix or Directions best-only,
+which both return Google's "preferred" route (not necessarily the quickest).
+
+One API call per property per destination (Routes API doesn't support batching).
+Arrival times are computed dynamically for the next Monday from today using the
+Europe/London timezone (handles BST/GMT automatically).
 
 Destinations:
-  - School : (51.41188, -0.29607)  arrive by 08:30 BST on 6 Apr 2026
-  - Office : (51.51922, -0.09738)  arrive by 10:00 BST on 6 Apr 2026
+  - School : (51.41188, -0.29607)  arrive by 08:30
+  - Office : (51.51922, -0.09738)  arrive by 10:00
 """
 
 import logging
-import urllib.parse
 import urllib.request
 import json
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timedelta, date, timezone
+from zoneinfo import ZoneInfo
 from typing import Optional
 
 logger = logging.getLogger("commute")
 
-# ----- Destinations --------------------------------------------------------
-SCHOOL_LATLNG = "51.41188,-0.29607"
-OFFICE_LATLNG = "51.51922,-0.09738"
+SCHOOL_LAT, SCHOOL_LNG = 51.41188, -0.29607
+OFFICE_LAT, OFFICE_LNG = 51.51922, -0.09738
 
-# ----- Target arrival times ------------------------------------------------
-# April 6, 2026 at 08:30 and 10:00 BST (UTC+1)
-_BST = timezone(timedelta(hours=1))
-SCHOOL_ARRIVAL_TS = int(datetime(2026, 4, 6, 8, 30, 0, tzinfo=_BST).timestamp())
-OFFICE_ARRIVAL_TS = int(datetime(2026, 4, 6, 10, 0, 0, tzinfo=_BST).timestamp())
+ROUTES_URL = "https://routes.googleapis.com/directions/v2:computeRoutes"
+FIELD_MASK = "routes.duration,routes.distanceMeters,routes.localizedValues"
 
-GMAPS_URL = "https://maps.googleapis.com/maps/api/distancematrix/json"
-BATCH_SIZE = 25  # Distance Matrix API allows max 25 origins per request
+_LONDON = ZoneInfo("Europe/London")
 
 
-# ---------------------------------------------------------------------------
+def _next_monday() -> date:
+    """Return the next Monday (never today, even if today is Monday)."""
+    today = datetime.now(_LONDON).date()
+    days_until_monday = (7 - today.weekday()) % 7 or 7  # always 1–7
+    return today + timedelta(days=days_until_monday)
 
-def _call_api(origins: list[str], destination: str, arrival_time: int, api_key: str) -> dict:
-    """Single Distance Matrix API call. Returns the full JSON response."""
-    params = {
-        "origins": "|".join(origins),
-        "destinations": destination,
-        "mode": "transit",
-        "arrival_time": arrival_time,
-        "key": api_key,
+
+def _arrival_ts(target_date: date, hour: int, minute: int) -> int:
+    """Unix timestamp for a given date and local time in Europe/London."""
+    dt = datetime(target_date.year, target_date.month, target_date.day,
+                  hour, minute, 0, tzinfo=_LONDON)
+    return int(dt.timestamp())
+
+
+def _arrival_rfc3339(ts: int) -> str:
+    """Convert Unix timestamp to RFC3339 UTC string required by Routes API."""
+    return datetime.fromtimestamp(ts, tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def _call_routes(origin_lat: float, origin_lng: float,
+                 dest_lat: float, dest_lng: float,
+                 arrival_time_rfc3339: str, api_key: str) -> dict:
+    """Single Routes API v2 call with alternatives enabled."""
+    body = {
+        "origin":      {"location": {"latLng": {"latitude": origin_lat,  "longitude": origin_lng}}},
+        "destination": {"location": {"latLng": {"latitude": dest_lat,    "longitude": dest_lng}}},
+        "travelMode":  "TRANSIT",
+        "arrivalTime": arrival_time_rfc3339,
+        "computeAlternativeRoutes": True,
     }
-    url = GMAPS_URL + "?" + urllib.parse.urlencode(params)
-    with urllib.request.urlopen(url, timeout=30) as resp:
-        return json.loads(resp.read().decode())
+    data = json.dumps(body).encode()
+    req = urllib.request.Request(
+        ROUTES_URL, data=data, method="POST",
+        headers={
+            "Content-Type": "application/json",
+            "X-Goog-Api-Key": api_key,
+            "X-Goog-FieldMask": FIELD_MASK,
+        },
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return json.loads(resp.read())
 
 
-def _parse_element(el: dict) -> tuple[Optional[int], str, Optional[float]]:
-    """Extract (seconds, text, distance_km) from a single matrix element."""
-    if el.get("status") != "OK":
-        logger.debug("Element status: %s", el.get("status"))
-        return None, "", None
-    duration = el.get("duration", {})
-    distance = el.get("distance", {})
-    seconds = duration.get("value")
-    text = duration.get("text", "")
-    km = round(distance.get("value", 0) / 1000, 2) if distance.get("value") else None
-    return seconds, text, km
+def _shortest_route(data: dict) -> tuple[Optional[int], str, Optional[float]]:
+    """
+    Pick the shortest route from a Routes API response.
+    Returns (seconds, human_text, distance_km).
+    Uses Google's localizedValues.duration.text for the human-readable string.
+    """
+    best_secs: Optional[int] = None
+    best_text: str = ""
+    best_km: Optional[float] = None
+
+    for route in data.get("routes", []):
+        dur_str = route.get("duration", "")           # e.g. "4018s"
+        secs = int(dur_str.rstrip("s")) if dur_str else None
+        if secs is None:
+            continue
+        if best_secs is None or secs < best_secs:
+            best_secs = secs
+            best_text = (route.get("localizedValues", {})
+                              .get("duration", {})
+                              .get("text", ""))
+            dist_m = route.get("distanceMeters")
+            best_km = round(dist_m / 1000, 2) if dist_m else None
+
+    return best_secs, best_text, best_km
 
 
 def enrich_commutes(properties: list, api_key: str) -> int:
     """
     Enrich properties in-place with school/office commute data.
 
+    Uses Routes API v2 with computeAlternativeRoutes=true; picks the shortest.
+    Arrival times target the next Monday from today (Europe/London timezone).
     Skips properties that already have commute data or no coordinates.
     Returns count of properties updated.
     """
-    # Only process properties that have lat/lng but no commute data yet
     to_update = [
         p for p in properties
         if p.latitude and p.longitude and p.school_commute_seconds is None
@@ -79,55 +120,51 @@ def enrich_commutes(properties: list, api_key: str) -> int:
         logger.info("Commute: all properties already enriched, nothing to do")
         return 0
 
-    logger.info("Commute: enriching %d properties (skipping %d already done)",
-                len(to_update), len(properties) - len(to_update))
+    monday = _next_monday()
+    school_ts = _arrival_ts(monday, 8, 30)
+    office_ts = _arrival_ts(monday, 10, 0)
+    school_rfc = _arrival_rfc3339(school_ts)
+    office_rfc = _arrival_rfc3339(office_ts)
+
+    logger.info(
+        "Commute: enriching %d properties (skipping %d already done) — "
+        "arrival Monday %s (school 08:30, office 10:00 London time) [Routes API v2 + alternatives]",
+        len(to_update), len(properties) - len(to_update), monday.isoformat(),
+    )
 
     updated = 0
-    for i in range(0, len(to_update), BATCH_SIZE):
-        batch = to_update[i:i + BATCH_SIZE]
-        origins = [f"{p.latitude},{p.longitude}" for p in batch]
-        batch_num = i // BATCH_SIZE + 1
-        total_batches = (len(to_update) + BATCH_SIZE - 1) // BATCH_SIZE
+    total = len(to_update)
+    for i, prop in enumerate(to_update, 1):
+        lat, lng = float(prop.latitude), float(prop.longitude)
 
         # --- School ---
-        logger.info("Commute batch %d/%d: school (%d properties)", batch_num, total_batches, len(batch))
         try:
-            resp = _call_api(origins, SCHOOL_LATLNG, SCHOOL_ARRIVAL_TS, api_key)
-            if resp.get("status") != "OK":
-                logger.warning("School batch %d API error: %s", batch_num, resp.get("status"))
-            else:
-                for prop, row in zip(batch, resp["rows"]):
-                    el = row["elements"][0]
-                    secs, text, km = _parse_element(el)
-                    prop.school_commute_seconds = secs
-                    prop.school_commute_text = text
-                    prop.school_distance_km = km
+            data = _call_routes(lat, lng, SCHOOL_LAT, SCHOOL_LNG, school_rfc, api_key)
+            n = len(data.get("routes", []))
+            secs, text, km = _shortest_route(data)
+            prop.school_commute_seconds = secs
+            prop.school_commute_text = text
+            prop.school_distance_km = km
+            logger.debug("School [%d/%d] %d alternatives, best=%s", i, total, n, text)
         except Exception as e:
-            logger.error("School batch %d failed: %s", batch_num, e)
+            logger.error("School [%d/%d] %s: %s", i, total, prop.address[:35], e)
 
         # --- Office ---
-        logger.info("Commute batch %d/%d: office (%d properties)", batch_num, total_batches, len(batch))
         try:
-            resp = _call_api(origins, OFFICE_LATLNG, OFFICE_ARRIVAL_TS, api_key)
-            if resp.get("status") != "OK":
-                logger.warning("Office batch %d API error: %s", batch_num, resp.get("status"))
-            else:
-                for prop, row in zip(batch, resp["rows"]):
-                    el = row["elements"][0]
-                    secs, text, km = _parse_element(el)
-                    prop.office_commute_seconds = secs
-                    prop.office_commute_text = text
-                    prop.office_distance_km = km
+            data = _call_routes(lat, lng, OFFICE_LAT, OFFICE_LNG, office_rfc, api_key)
+            n = len(data.get("routes", []))
+            secs, text, km = _shortest_route(data)
+            prop.office_commute_seconds = secs
+            prop.office_commute_text = text
+            prop.office_distance_km = km
+            logger.debug("Office [%d/%d] %d alternatives, best=%s", i, total, n, text)
         except Exception as e:
-            logger.error("Office batch %d failed: %s", batch_num, e)
+            logger.error("Office [%d/%d] %s: %s", i, total, prop.address[:35], e)
 
-        updated += len(batch)
-        logger.info(
-            "Commute batch %d/%d done — sample: %s school=%s office=%s",
-            batch_num, total_batches,
-            batch[0].address[:40],
-            batch[0].school_commute_text,
-            batch[0].office_commute_text,
-        )
+        updated += 1
+        if i % 25 == 0 or i == total:
+            logger.info("Commute [%d/%d] %s — school=%s office=%s",
+                        i, total, prop.address[:40],
+                        prop.school_commute_text, prop.office_commute_text)
 
     return updated
