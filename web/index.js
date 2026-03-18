@@ -75,6 +75,13 @@ async function initMap() {
     document.getElementById('office_max').value = maxOffice;
     document.getElementById('price_max').value = maxPrice;
 
+    function secsToText(s) {
+        const m = Math.round(s / 60);
+        return m >= 60 ? `${Math.floor(m/60)} hr ${m%60} min` : `${m} min`;
+    }
+    document.getElementById('school_max_text').textContent = secsToText(maxSchool);
+    document.getElementById('office_max_text').textContent = secsToText(maxOffice);
+
     let filtered = all_properties.filter(p =>
         (p.school_commute_seconds == null || p.school_commute_seconds <= maxSchool) &&
         (p.office_commute_seconds == null || p.office_commute_seconds <= maxOffice) &&
