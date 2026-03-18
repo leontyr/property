@@ -31,6 +31,7 @@ from models import Property
 from parsers.search import parse_listings, parse_pagination, extract_listing_summary
 from parsers.detail import parse_detail
 from parsers.estimate import parse_estimate
+from commute import enrich_commutes
 
 logging.basicConfig(
     level=logging.INFO,
@@ -77,8 +78,13 @@ def load_existing(output_path: Path) -> dict[str, dict]:
         return {}
     df = pd.read_csv(csv_path, dtype=str)
     # Convert numeric-ish columns back
-    int_cols = ["listing_price", "beds", "baths", "estimate_price", "estimate_low", "estimate_high"]
-    float_cols = ["latitude", "longitude"]
+    int_cols = [
+        "listing_price", "beds", "baths",
+        "estimate_price", "estimate_low", "estimate_high",
+        "price_delta",
+        "school_commute_seconds", "office_commute_seconds",
+    ]
+    float_cols = ["latitude", "longitude", "school_distance_km", "office_distance_km"]
     for col in int_cols:
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors="coerce").astype("Int64")
@@ -196,6 +202,7 @@ async def scrape(
     save_samples: bool = False,
     headless: bool = True,
     max_properties: Optional[int] = None,
+    gmaps_api_key: Optional[str] = None,
 ):
     # Load any previously scraped records so we can skip detail/estimate pages
     existing: dict[str, dict] = load_existing(output_path)
@@ -315,6 +322,17 @@ async def scrape(
         stats_new, stats_updated, len(extra_props),
     )
 
+    # Stage 4: compute price_delta for all properties
+    for prop in all_props:
+        prop.compute_derived()
+
+    # Stage 5: commute enrichment (only new/unenriched properties)
+    if gmaps_api_key:
+        n_enriched = enrich_commutes(all_props, gmaps_api_key)
+        logger.info("Commute enrichment: %d properties updated", n_enriched)
+    else:
+        logger.info("No --gmaps-key provided, skipping commute enrichment")
+
     save_results(all_props, output_path)
     return all_props
 
@@ -365,6 +383,11 @@ def main():
         help="Run browser with visible window (useful for debugging Cloudflare)",
     )
     parser.add_argument(
+        "--gmaps-key",
+        default=None,
+        help="Google Maps API key for commute enrichment",
+    )
+    parser.add_argument(
         "--verbose",
         action="store_true",
         help="Enable debug logging",
@@ -384,6 +407,7 @@ def main():
             save_samples=args.save_samples,
             headless=args.headless,
             max_properties=args.max_properties,
+            gmaps_api_key=args.gmaps_key,
         )
     )
 

@@ -18,7 +18,14 @@
     "estimate_price": 1030000,
     "estimate_low": 980000,
     "estimate_high": 1080000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021769987/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021769987/",
+    "price_delta": 20000,
+    "school_commute_seconds": 542,
+    "school_commute_text": "9 mins",
+    "school_distance_km": 0.66,
+    "office_commute_seconds": 4085,
+    "office_commute_text": "1 hour 8 mins",
+    "office_distance_km": 22.79
   },
   {
     "property_id": "72681969",
@@ -39,7 +46,14 @@
     "estimate_price": 1050000,
     "estimate_low": 843000,
     "estimate_high": 1270000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021764787/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021764787/",
+    "price_delta": 100000,
+    "school_commute_seconds": 700,
+    "school_commute_text": "12 mins",
+    "school_distance_km": 1.23,
+    "office_commute_seconds": 3625,
+    "office_commute_text": "1 hour 0 mins",
+    "office_distance_km": 22.27
   },
   {
     "property_id": "72674570",
@@ -54,13 +68,20 @@
     "property_name": "5 bed semi-detached house for sale",
     "description": "This well balanced property offers generous living and entertaining accommodation across three floors. The current owners carried out a beautiful ground floor extension to the rear with plenty of natural light, a part vaulted ceiling and underfloor heating. This room is cleverly divided into three areas; the kitchen, dining room and family room. The kitchen is fully fitted with well designed storage and built in appliances including a Rangemaster fridge/freezer and Smeg Range Cooker. Bifolding doors and double doors lead to the landscaped patio and mature garden, with a summerhouse to the rear with electricity. The drawing room at the front of the property is spacious with a log burner and large bay window covered by Venetian shutters. An additional reception room/study, a utility room and guest WC complete the ground floor. The principal bedroom suite also offers an impressive vaulted ceiling of 3.3m, a very wide freestanding wardrobe (which the seller has advised can be included in a sale) and an en suite shower room. The first floor has three further double bedrooms and a spacious family bathroom with a separate shower and underfloor heating. There is an additional bedroom on the top floor overlooking the garden. All the bedrooms benefit from Venetian shutters on the windows. The seller has advised that the property has CCTV, a water softener and Ring doorbell, all of which can be included in a sale. Dickerage Road is very well situated in close proximity to Norbiton Station with direct trainlines to London Waterloo and towards Kingston Station and beyond. Excellent State and Independent schools and recreational facilities are also nearby including childrenâs playground, established golf courses and tennis clubs. Useful local shops and cafes are situated at the end of Dickerage Road, and both Kingston Hospital and Richmond Park are within walking distance. Whilst Kingston and Wimbledon Town centres are within easy reach with their wide array of cafes, restaurants and shops",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-03-16",
     "postcode": "KT1 3SP",
     "estimate_price": 1430000,
     "estimate_low": 1280000,
     "estimate_high": 1570000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021758161/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021758161/",
+    "price_delta": 70000,
+    "school_commute_seconds": 944,
+    "school_commute_text": "16 mins",
+    "school_distance_km": 1.71,
+    "office_commute_seconds": 3969,
+    "office_commute_text": "1 hour 6 mins",
+    "office_distance_km": 22.71
   },
   {
     "property_id": "72675189",
@@ -81,7 +102,14 @@
     "estimate_price": 765000,
     "estimate_low": 727000,
     "estimate_high": 804000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021754057/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021754057/",
+    "price_delta": -135050,
+    "school_commute_seconds": 701,
+    "school_commute_text": "12 mins",
+    "school_distance_km": 0.83,
+    "office_commute_seconds": 4249,
+    "office_commute_text": "1 hour 11 mins",
+    "office_distance_km": 24.11
   },
   {
     "property_id": "72672430",
@@ -96,13 +124,20 @@
     "property_name": "4 bed semi-detached house for sale",
     "description": "Viewings from 11th April. No chain. Finally! A house of magnificent proportion without any compromise. This home puts buyers just where they want to be and comes with driveway parking, a garage, four double bedrooms, a large garden and a very spacious kitchen entertaining space. Not only does this house offer a large loft bedroom, it possesses a sizeable width of plot of which we can all be envious. Buyers will fully appreciate both the principal reception space which is ideal to retire to of an evening. Letâs not forget, the house is positioned in one of Kingstonâs most requested roads, a short stroll to Norbiton station, Richmond Park and the convenience shops and restaurants at The Triangle.",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-03-16",
     "postcode": "KT1 3RX",
     "estimate_price": 1260000,
     "estimate_low": 1140000,
     "estimate_high": 1390000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021753856/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021753856/",
+    "price_delta": 35000,
+    "school_commute_seconds": 844,
+    "school_commute_text": "14 mins",
+    "school_distance_km": 2.89,
+    "office_commute_seconds": 4106,
+    "office_commute_text": "1 hour 8 mins",
+    "office_distance_km": 22.86
   },
   {
     "property_id": "72670294",
@@ -123,7 +158,14 @@
     "estimate_price": 937000,
     "estimate_low": 843000,
     "estimate_high": 1030000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021755026/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021755026/",
+    "price_delta": -112000,
+    "school_commute_seconds": 784,
+    "school_commute_text": "13 mins",
+    "school_distance_km": 1.76,
+    "office_commute_seconds": 4089,
+    "office_commute_text": "1 hour 8 mins",
+    "office_distance_km": 22.86
   },
   {
     "property_id": "72665064",
@@ -144,7 +186,14 @@
     "estimate_price": 1350000,
     "estimate_low": 1290000,
     "estimate_high": 1420000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021767770/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021767770/",
+    "price_delta": 125000,
+    "school_commute_seconds": 611,
+    "school_commute_text": "10 mins",
+    "school_distance_km": 1.65,
+    "office_commute_seconds": 4986,
+    "office_commute_text": "1 hour 23 mins",
+    "office_distance_km": 28.64
   },
   {
     "property_id": "72658842",
@@ -165,7 +214,14 @@
     "estimate_price": 1000000,
     "estimate_low": 954000,
     "estimate_high": 1050000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021756499/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021756499/",
+    "price_delta": 25000,
+    "school_commute_seconds": 510,
+    "school_commute_text": "9 mins",
+    "school_distance_km": 0.61,
+    "office_commute_seconds": 3740,
+    "office_commute_text": "1 hour 2 mins",
+    "office_distance_km": 22.41
   },
   {
     "property_id": "72656248",
@@ -186,7 +242,14 @@
     "estimate_price": 1240000,
     "estimate_low": 993000,
     "estimate_high": 1490000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021768200/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021768200/",
+    "price_delta": 260000,
+    "school_commute_seconds": 691,
+    "school_commute_text": "12 mins",
+    "school_distance_km": 1.94,
+    "office_commute_seconds": 4635,
+    "office_commute_text": "1 hour 17 mins",
+    "office_distance_km": 24.39
   },
   {
     "property_id": "72655275",
@@ -207,7 +270,14 @@
     "estimate_price": 1020000,
     "estimate_low": 971000,
     "estimate_high": 1070000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021770006/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021770006/",
+    "price_delta": 5000,
+    "school_commute_seconds": 511,
+    "school_commute_text": "9 mins",
+    "school_distance_km": 0.63,
+    "office_commute_seconds": 4052,
+    "office_commute_text": "1 hour 8 mins",
+    "office_distance_km": 22.76
   },
   {
     "property_id": "72649990",
@@ -228,7 +298,14 @@
     "estimate_price": 1240000,
     "estimate_low": 1170000,
     "estimate_high": 1300000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/128038744/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/128038744/",
+    "price_delta": 10000,
+    "school_commute_seconds": 825,
+    "school_commute_text": "14 mins",
+    "school_distance_km": 1.01,
+    "office_commute_seconds": 4109,
+    "office_commute_text": "1 hour 8 mins",
+    "office_distance_km": 22.84
   },
   {
     "property_id": "72633412",
@@ -249,7 +326,14 @@
     "estimate_price": null,
     "estimate_low": null,
     "estimate_high": null,
-    "estimate_url": NaN
+    "estimate_url": NaN,
+    "price_delta": null,
+    "school_commute_seconds": 757,
+    "school_commute_text": "13 mins",
+    "school_distance_km": 0.92,
+    "office_commute_seconds": 4448,
+    "office_commute_text": "1 hour 14 mins",
+    "office_distance_km": 23.26
   },
   {
     "property_id": "72630213",
@@ -260,17 +344,24 @@
     "latitude": 51.404135,
     "longitude": -0.30205,
     "detail_url": "https://www.zoopla.co.uk/for-sale/details/72630213/",
-    "uprn": "",
+    "uprn": NaN,
     "property_name": "4 bed terraced house for sale",
     "description": "Situated on a popular residential street is this well presented end of terrace townhouse offering 1,509 sq ft of accommodation over three floors. The property has been tastefully refurbished by the current owners and is just a short walk from the River Thames and Fairfield Park, perfect for recreational pursuits. Grove Crescent is centrally situated within Kingston Upon Thames and is ideally positioned for Richmond Park, Kingston and Surbiton mainline train stations and the areas extensive shopping and leisure amenities including both high street and artisan shops, independent coffee shops and fabulous bars and restaurants. Tenure: Freehold Council Tax Band: F Information contained within this listing is for guidance only and should be checked and confirmed (prior to proceeding).",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-03-10",
     "postcode": "KT1 2DG",
     "estimate_price": null,
     "estimate_low": null,
     "estimate_high": null,
-    "estimate_url": ""
+    "estimate_url": NaN,
+    "price_delta": null,
+    "school_commute_seconds": 649,
+    "school_commute_text": "11 mins",
+    "school_distance_km": 1.44,
+    "office_commute_seconds": 4474,
+    "office_commute_text": "1 hour 15 mins",
+    "office_distance_km": 24.81
   },
   {
     "property_id": "72622227",
@@ -291,7 +382,14 @@
     "estimate_price": 1050000,
     "estimate_low": 843000,
     "estimate_high": 1270000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021764787/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021764787/",
+    "price_delta": 100000,
+    "school_commute_seconds": 700,
+    "school_commute_text": "12 mins",
+    "school_distance_km": 1.23,
+    "office_commute_seconds": 3625,
+    "office_commute_text": "1 hour 0 mins",
+    "office_distance_km": 22.27
   },
   {
     "property_id": "66895507",
@@ -312,7 +410,14 @@
     "estimate_price": 991000,
     "estimate_low": 942000,
     "estimate_high": 1040000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021754971/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021754971/",
+    "price_delta": -66000,
+    "school_commute_seconds": 644,
+    "school_commute_text": "11 mins",
+    "school_distance_km": 1.19,
+    "office_commute_seconds": 3980,
+    "office_commute_text": "1 hour 6 mins",
+    "office_distance_km": 22.7
   },
   {
     "property_id": "72617749",
@@ -333,7 +438,14 @@
     "estimate_price": 1220000,
     "estimate_low": 1100000,
     "estimate_high": 1340000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/128028547/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/128028547/",
+    "price_delta": -170000,
+    "school_commute_seconds": 483,
+    "school_commute_text": "8 mins",
+    "school_distance_km": 0.59,
+    "office_commute_seconds": 4084,
+    "office_commute_text": "1 hour 8 mins",
+    "office_distance_km": 23.96
   },
   {
     "property_id": "72617689",
@@ -354,7 +466,14 @@
     "estimate_price": 886000,
     "estimate_low": 798000,
     "estimate_high": 975000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100023057197/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100023057197/",
+    "price_delta": 414000,
+    "school_commute_seconds": 511,
+    "school_commute_text": "9 mins",
+    "school_distance_km": 0.99,
+    "office_commute_seconds": 3706,
+    "office_commute_text": "1 hour 2 mins",
+    "office_distance_km": 22.38
   },
   {
     "property_id": "72613782",
@@ -375,7 +494,14 @@
     "estimate_price": 985000,
     "estimate_low": 936000,
     "estimate_high": 1030000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021756429/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021756429/",
+    "price_delta": -35000,
+    "school_commute_seconds": 232,
+    "school_commute_text": "4 mins",
+    "school_distance_km": 0.26,
+    "office_commute_seconds": 4006,
+    "office_commute_text": "1 hour 7 mins",
+    "office_distance_km": 23.85
   },
   {
     "property_id": "72602386",
@@ -390,13 +516,20 @@
     "property_name": "4 bed detached house for sale",
     "description": "Nestled on the charming Thorpe Road in Kingston Upon Thames, this exquisite detached Victorian villa offers a perfect blend of classic elegance and modern living. With its impressive faÃ§ade and well-maintained exterior, this property is sure to capture your heart from the moment you arrive. Inside, you will find two spacious reception rooms that provide ample space for relaxation and entertaining. The highlight of the home is undoubtedly the stunning open plan kitchen and dining area, featuring floor-to-ceiling glass doors that flood the space with natural light and seamlessly connect to the outdoor area. This design creates an inviting atmosphere, perfect for family gatherings or hosting friends. The property boasts four bedrooms, providing plenty of room for a growing family or guests. With two well-appointed bathrooms, morning routines will be a breeze, ensuring comfort and convenience for all. Additionally, the utility room and downstairs WC add to the practicality of this delightful home. Immaculately presented throughout, this Victorian villa retains its period charm while offering modern amenities that cater to contemporary lifestyles. The thoughtful layout and stylish finishes make it a truly special place to call home. This property is ideally situated in a sought-after area, close to local amenities, schools, and transport links, making it an excellent choice for families and professionals alike. Do not miss the opportunity to make this stunning Victorian villa your own. Located in this premier North Kingston road close to Canbury Gardens, Thorpe Road is a very sought after address. The property is ideally situated for Kingston station giving direct access into Waterloo and the A3 which serves both London and the M25. Kingston town centre with its array of shops and restaurants is a short distance away as is Richmond Park. The standard of schooling in the immediate area is excellent within both the private &amp; state sectors to include Fern Hill, Latchmere, Kingston Grammar and The German School",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-03-06",
     "postcode": "KT2 5EU",
     "estimate_price": 1020000,
     "estimate_low": 814000,
     "estimate_high": 1220000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021768564/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021768564/",
+    "price_delta": 80000,
+    "school_commute_seconds": 475,
+    "school_commute_text": "8 mins",
+    "school_distance_km": 1.21,
+    "office_commute_seconds": 4881,
+    "office_commute_text": "1 hour 21 mins",
+    "office_distance_km": 28.81
   },
   {
     "property_id": "72597602",
@@ -411,13 +544,20 @@
     "property_name": "5 bed detached house for sale",
     "description": "This substantial Victorian detached home with driveway parking spans over 2100 sq ft and provides five bedrooms, two bathrooms (one en suite) and a peaceful and secluded rear garden. Set over three floors, the house offers generous, balanced living space, including two reception rooms, a contemporary kitchen and a large conservatory with heat pump and air conditioning and a useful cellar with utility area. Further features include double glazing and solar thermal panels. Ideally positioned near the River Thames, Richmond Park and just a short walk from Kingstonâs vibrant town centre, the property is also close to popular local schools such as The Kingston Academy and Fern Hill Primary School.",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-03-06",
     "postcode": "KT2 5HD",
     "estimate_price": 1430000,
     "estimate_low": 1360000,
     "estimate_high": 1500000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021766845/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021766845/",
+    "price_delta": -55000,
+    "school_commute_seconds": 445,
+    "school_commute_text": "7 mins",
+    "school_distance_km": 1.17,
+    "office_commute_seconds": 4791,
+    "office_commute_text": "1 hour 20 mins",
+    "office_distance_km": 28.7
   },
   {
     "property_id": "72587548",
@@ -438,7 +578,14 @@
     "estimate_price": 883000,
     "estimate_low": 838000,
     "estimate_high": 927000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100023057256/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100023057256/",
+    "price_delta": -33050,
+    "school_commute_seconds": 577,
+    "school_commute_text": "10 mins",
+    "school_distance_km": 0.69,
+    "office_commute_seconds": 4270,
+    "office_commute_text": "1 hour 11 mins",
+    "office_distance_km": 23.03
   },
   {
     "property_id": "72583704",
@@ -453,13 +600,20 @@
     "property_name": "3 bed semi-detached house for sale",
     "description": "This stunning, newly renovated three-bedroom semi-detached house presents an exceptional opportunity for families and individuals alike. The property has been beautifully extended on the ground floor, creating a spacious and inviting living environment. This exquisite home provides generous accommodation in excess of 1800sqft (including outbuilding). The ground floor offers a lovely front reception room with bay window, downstairs shower room, storage to the front and the real hub of the house, an incredible open plan kitchen / dining / living room measuring an amazing 26ft x 35ft. This versatile space has been recently completed in 2026, so everything is brand new. There is a high end kitchen, excellent island â perfect for entertaining guests and tall glass sliding doors which lead out on the garden. The newly landscaped Southerly aspect rear garden measures an impressive 48ft x 30ft complete with superb 220sqft outbuilding. This versatile space can serve various purposes, whether as a home office, studio, gym or additional storage. Upstairs the house boasts two spacious double bedrooms, a luxurious bathroom and an additional bedroom. There is enormous scope to expand further into the loft, subject to necessary consents (stnc), offering a buyer exciting possibilities for further expansion, allowing you to tailor the home to your specific needs. Additionally there is off street parking for two cars and an electric charging point to the front. In summary, this beautifully extended semi-detached house on Orme Road offers a perfect blend of comfort, space, and potential in a sought-after location. Internal viewings are highly recommended! Orme Road is a popular residential street conveniently located for Kingston town centre. Richmond Park with its many acres of open space and the Thames with its pleasant riverside walks are close by, the property is easily accessible to Norbiton Village with its select range of local shops and moments from Norbiton station offering a direct service into Waterloo. The A3 which serves both London and the M25 is easily accessible by car; the standard of schooling in the immediate area is excellent within both the private and state sectors",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-03-05",
     "postcode": "KT1 3SA",
     "estimate_price": 923000,
     "estimate_low": 830000,
     "estimate_high": 1020000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021765098/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021765098/",
+    "price_delta": 27000,
+    "school_commute_seconds": 741,
+    "school_commute_text": "12 mins",
+    "school_distance_km": 2.21,
+    "office_commute_seconds": 3865,
+    "office_commute_text": "1 hour 4 mins",
+    "office_distance_km": 22.58
   },
   {
     "property_id": "72572184",
@@ -474,13 +628,20 @@
     "property_name": "4 bed terraced house for sale",
     "description": "An ornate and stunningly renovated Victorian house in a friendly cul-de-sac. Extended to offer four doubles, abundant living space, contemporary bathrooms &amp; amazing kitchen-family room over 1750sq ft internal space. Original &amp; enhanced character features abound. No onward chain. This stunning Victorian property is really special with its ornate terracotta front faÃ§ade with hand-carved brickwork. It has been renovated beautifully throughout, thoughtfully designed with premium materials, beautiful interiors with master builders paying close attention to the original features and enhancements to those features. It has been extended to offer a contemporary living space with underfloor heating throughout, on the ground floor . As one enters the property, the original ground tiles will be noted as will the beautiful original front door with brass letter plate and period detailing and the entrance Hall finished with elegant marble from Mandarin Stone. The front double living room provides 22ft of space with Pooky feature lighting, a grand front window bay, 3-meter high ceilings and cornicing plus the original fireplace refurbished. This opens on to a contemporary kitchen-family room with Corston brassware switches and sockets, solid timber âShaker-styleâ units with pantry-style double cupboard and marble finish Quartz worktops. Frameless sliding doors create a seamless indoorâoutdoor flow on to a south-facing landscaped garden. The kitchen further includes a 3-metre island with Caple wine fridge and all premium integrated appliances - eye-level self-cleaning Neff oven, Neff combi microwave oven, Bosch fridge/freezer and 5-ring induction hob with Faber induction extractor fan. A separate utility is further ready fitted with a Bosch washing machine and tumble dryer with storage space. Separately, off the hallway there is a ground floor WC. An attractive new staircase to the first floor offers the living space over the first &amp; second floors with four double bedrooms in total â three bedrooms with fitted wardrobes. There is a first floor four-piece family bathroom with polished nickel taps and shower fittings from Lusso Stone. The top floor offers a wonderful master suite with a 20ft bedroom plus eaves storage, a separate walk-in wardrobe with fitted wardrobe plus space for dressing table. This leads to a bright and spacious wetroom with a large, screened shower with Perla Beige marble flooring and vanity sink. This amazing new property is offered to the market with no onward chain and is perfectly suited to bright young families as is the demand. It is in catchment for ofsted âoutstandingâ schools nearby. It is also within a quarter mile (220m) from Hampton Wick train station with up to 8 services per hour direct to Waterloo, Kingston &amp; Richmond. Also, Kingston is within an easy half a mile. EPC rated",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-03-04",
     "postcode": "KT1 4DW",
     "estimate_price": 869000,
     "estimate_low": 826000,
     "estimate_high": 912000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021782496/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021782496/",
+    "price_delta": 630950,
+    "school_commute_seconds": 695,
+    "school_commute_text": "12 mins",
+    "school_distance_km": 2.14,
+    "office_commute_seconds": 3991,
+    "office_commute_text": "1 hour 7 mins",
+    "office_distance_km": 24.25
   },
   {
     "property_id": "72566289",
@@ -501,7 +662,14 @@
     "estimate_price": 1120000,
     "estimate_low": 1070000,
     "estimate_high": 1180000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021763783/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021763783/",
+    "price_delta": 80000,
+    "school_commute_seconds": 820,
+    "school_commute_text": "14 mins",
+    "school_distance_km": 1.78,
+    "office_commute_seconds": 4123,
+    "office_commute_text": "1 hour 9 mins",
+    "office_distance_km": 22.89
   },
   {
     "property_id": "72561558",
@@ -522,7 +690,14 @@
     "estimate_price": 1180000,
     "estimate_low": 1120000,
     "estimate_high": 1230000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021764940/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021764940/",
+    "price_delta": -80000,
+    "school_commute_seconds": 724,
+    "school_commute_text": "12 mins",
+    "school_distance_km": 1.26,
+    "office_commute_seconds": 3649,
+    "office_commute_text": "1 hour 1 min",
+    "office_distance_km": 22.3
   },
   {
     "property_id": "72559067",
@@ -537,13 +712,20 @@
     "property_name": "4 bed end terrace house for sale",
     "description": "A fantastic opportunity to acquire this four-bedroom end-of-terrace townhouse, offered to the market with no onward chain, located within the sought-after Blenheim Gardens development, conveniently positioned close to Norbiton train station and Richmond Park. The property is currently configured as a four-bedroom home, with flexible accommodation arranged over three floors. Partition walls are in place, offering scope to reconfigure the layout to suit a familyâs requirements or to maximise rental potential. The ground floor comprises an entrance hallway with a downstairs WC immediately to the left upon entry. The hallway provides access to the integral garage and leads through to the kitchen and separate dining room, both positioned at the rear of the property overlooking the garden. On the first floor, there is a spacious double bedroom and a generous reception room with a bathroom located off it, offering versatile living arrangements depending on requirements. The second floor features one large double bedroom and two further smaller double bedrooms, currently divided by partition walls, providing flexible bedroom space. Further benefits include gas central heating, off-street parking, and ample storage throughout. As the property is currently tenanted, the property benefits from a valid eicr and previous Gas Safety certification. While some updating is required, this home presents excellent potential for both investors and owner-occupiers alike. Offered with no onward chain. Early viewing is highly recommended",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-03-03",
     "postcode": "KT2 7BW",
     "estimate_price": 904000,
     "estimate_low": 813000,
     "estimate_high": 994000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021754766/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021754766/",
+    "price_delta": -104000,
+    "school_commute_seconds": 757,
+    "school_commute_text": "13 mins",
+    "school_distance_km": 1.79,
+    "office_commute_seconds": 3976,
+    "office_commute_text": "1 hour 6 mins",
+    "office_distance_km": 22.77
   },
   {
     "property_id": "70571300",
@@ -564,28 +746,14 @@
     "estimate_price": null,
     "estimate_low": null,
     "estimate_high": null,
-    "estimate_url": NaN
-  },
-  {
-    "property_id": "72525144",
-    "listing_price": 600000,
-    "beds": 3,
-    "baths": 1,
-    "address": "32 Lower Marsh Lane, Kingston Upon Thames KT1",
-    "latitude": 51.401294,
-    "longitude": -0.292135,
-    "detail_url": "https://www.zoopla.co.uk/for-sale/details/72525144/",
-    "uprn": "128036828",
-    "property_name": "3 bed terraced house for sale",
-    "description": "Charming 3-Bedroom Terraced House in the Heart of Kingston upon Thames A delightful three-bedroom terraced home perfectly positioned in one of Kingstonâs most convenient and well-connected locations. This property combines comfortable, well-proportioned living spaces with easy access to transport, local amenities and schools - ideal for families, first-time buyers, or commuters. Key Features Ground Floor Kitchen: A practical and inviting kitchen space with room for everyday cooking and casual dining. The layout offers potential to personalise or extend (subject to planning) to suit modern living. Living Room: A bright, welcoming living room that forms the heart of the home - perfect for relaxation and entertaining. Natural light flows through, creating a warm and comfortable atmosphere. Bathroom: Located on the ground floor for convenience, the bathroom is well-situated to serve both residents and guests. First Floor Master Bedroom: Generous in size, the master bedroom provides a peaceful retreat with ample storage and room for freestanding furniture. Two Further Bedrooms: Two additional well-proportioned bedrooms that work perfectly as childrenâs rooms, guest rooms or home office/study space. Outdoor Space Garden: A private rear garden offers a peaceful outdoor area to enjoy alfresco dining, gardening or simply relaxing - a valuable addition in this central location. Location &amp; Transport Situated in the centre of everything, this home benefits from superb connectivity and convenience: Transport Links: At the end of the road is the railway line with direct services into London Waterloo, making this an excellent choice for commuters. Additional nearby stations are just a short 5â10 minute walk, offering flexible travel options across the capital and surrounding areas. Local Amenities: Everything you need is close at hand - from shops, cafes and restaurants to supermarkets and local services. The vibrant town centre of Kingston upon Thames is easily accessible on foot, with cultural attractions, leisure facilities and riverside walks adding to its appeal. Good Local Schools: The area is known for its selection of well-regarded primary and secondary schools, making it particularly suitable for families. Summary This three-bedroom terraced house offers a rare blend of central convenience, transport accessibility and comfortable family living. With a thoughtful layout, outdoor space and excellent local facilities, it represents a compelling opportunity in one of Kingston upon Thamesâ most desirable pockets. Viewing is highly recommended to fully appreciate the size and potential of this property. Buyer Process: Our customers use British Homebuyers to either purchase or assist in selling properties quickly and reliably. Therefore any new applicants to purchase are subject to vetting to ensure they meet strict criteria. Exclusivity Fee: You can secure the purchase by paying an exclusivity fee of Â£2,000. This grants the buyer exclusive rights to proceed with the purchase for the duration of the conveyancing process, during which time the seller agrees to remove the property from the market and not negotiate with other parties. The exclusivity fee is returned to the buyer upon successful completion of the purchase. A processing fee of Â£200 is required in order to draw up an exclusive legally binding contract between the buyer and seller. This agreement sets out the terms of exclusivity and seller commitment but does not constitute an exchange of contracts. This arrangement provides buyers with reassurance that the property is secured exclusively for them, reducing the risk of gazumping and unnecessary aborted costs. Disclaimer The particulars are set out as a general outline only for the guidance of intended purchasers and do not constitute, any part of a contract. Nothing in these particulars shall be deemed to be a statement that the property is in good structural condition or otherwise nor that any of the services, appliances, equipment or facilities are in good working order. Purchasers should satisfy themselves of this prior to purchasing. The photograph(s) depict only certain parts of the property. It should not be assumed that any contents/furniture etc. Photographed are included in the sale. It should not be assumed that the property remains as displayed in the photograph(s). No assumption should be made with regard to parts of the property that have not been photographed. Any areas, measurements, aspects or distances referred to are given as a guide only and are not precise. If such details are fundamental to a purchase, purchasers must rely on their own enquiries. Descriptions of the property are subjective and are used in good faith as an opinion and not as a statement of fact. Please make further inquiries to ensure that our descriptions are likely to match any expectations you may have. Kitchen (4.09m x 3.92m) Living Room (3.12m x 2.9m) Master Bedroom (4.21m x 3.42m) Bedroom 2 (3.85m x 2.81m) Bedroom 3 (2.86m x 1.98m)</strong",
-    "tenure": "freehold",
-    "floor_size": "",
-    "listing_update_date": "2026-02-26",
-    "postcode": "KT1 3BJ",
-    "estimate_price": 626000,
-    "estimate_low": 595000,
-    "estimate_high": 658000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/128036828/"
+    "estimate_url": NaN,
+    "price_delta": null,
+    "school_commute_seconds": 745,
+    "school_commute_text": "12 mins",
+    "school_distance_km": 0.91,
+    "office_commute_seconds": 4908,
+    "office_commute_text": "1 hour 22 mins",
+    "office_distance_km": 23.16
   },
   {
     "property_id": "72526158",
@@ -606,7 +774,14 @@
     "estimate_price": 765000,
     "estimate_low": 727000,
     "estimate_high": 804000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021768493/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021768493/",
+    "price_delta": -5000,
+    "school_commute_seconds": 574,
+    "school_commute_text": "10 mins",
+    "school_distance_km": 1.48,
+    "office_commute_seconds": 3787,
+    "office_commute_text": "1 hour 3 mins",
+    "office_distance_km": 22.47
   },
   {
     "property_id": "72531337",
@@ -621,13 +796,20 @@
     "property_name": "3 bed semi-detached house for sale",
     "description": "This exquisite Victorian semi-detached house offers an exceptional standard of living throughout. Each floor has been thoughtfully designed to the highest of specifications, maximising space and light. Situated on an extremely sought after secondary river road in North Kingston, this amazing home provides wonderful accommodation perfect for modern living. The ground floor provides a front reception room which retains its generous Victorian proportions and character, with bay window and original feature fireplace. The real heart of the home, a magnificent open plan kitchen/ dining/ living room, featuring polished concrete floors complete with underfloor heating, top of the range Siemens appliances, instant boiling water tap, log burning fire place by Contura, Crittall doors, exposed brick wall and excellent glass windows and roof allowing an abundance of natural light. This amazing impressive space creates a seamless flow for entertaining and everyday living. The first floor contains two excellent double bedrooms, both complete with built in wardrobes, bespoke shutters and a luxurious bathroom with a rainfall shower. The top floor is dedicated to the principle suite, a wonderful double bedroom with built in wardrobes and top of the range finishes, plus a magnificent bathroom with separate roll top bath and rainfall shower. Externally, there is an immaculately landscaped private rear garden with integrated lighting, a tranquil oasis ideal for relaxation or hosting gatherings with friends and family. To the front there is additional bespoke storage for bikes and bins. This lavish home is a true gem, with this secondary river road location providing a peaceful atmosphere, moments from the River Thames while still being very conveniently placed for local amenities, schools and transport links. Combining modern elegance with practical living spaces, makes this house a must-see for anyone looking to purchase in this desirable area. Windsor Road is one of the sought after North Kingston secondary river roads. The property is conveniently positioned for Kingston station giving direct access into Waterloo and the A3 which serves both London &amp; the M25. Kingston town centre with its array of shops, restaurants and bars is a short distance away. The standard of schooling in the immediate area is excellent within both the private and state sectors",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-02-26",
     "postcode": "KT2 5EY",
     "estimate_price": 973000,
     "estimate_low": 924000,
     "estimate_high": 1020000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021770199/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021770199/",
+    "price_delta": 27000,
+    "school_commute_seconds": 419,
+    "school_commute_text": "7 mins",
+    "school_distance_km": 1.14,
+    "office_commute_seconds": 4144,
+    "office_commute_text": "1 hour 9 mins",
+    "office_distance_km": 24.02
   },
   {
     "property_id": "72531635",
@@ -642,13 +824,20 @@
     "property_name": "3 bed terraced house for sale",
     "description": "Offered with no onward chain, this spacious townhouse is tucked away in a quiet riverside development. Benefiting from three bedrooms, a large reception on the first floor which could be bedroom four, a garage with off street parking and access to beautiful communal gardens. Broom Park is a highly sought after spot adjacent to the river Thames. You're within walking distance to both Teddington High Street and Kingston town centre as well as catchment for some top schools. It offers a bit of peace and quiet, while still keeping you connected. Tenure: Freehold Lease Years Remaining: 944 Service Charge: Â£400 (Yearly) Annual Ground Rent: Â£5 Council Tax Band: F Information contained within this listing is for guidance only and should be checked and confirmed (prior to proceeding).",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-02-26",
     "postcode": "TW11 9RR",
     "estimate_price": 977000,
     "estimate_low": 928000,
     "estimate_high": 1030000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100022320554/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100022320554/",
+    "price_delta": -7050,
+    "school_commute_seconds": 1201,
+    "school_commute_text": "20 mins",
+    "school_distance_km": 2.99,
+    "office_commute_seconds": 4531,
+    "office_commute_text": "1 hour 16 mins",
+    "office_distance_km": 24.92
   },
   {
     "property_id": "72533087",
@@ -663,13 +852,20 @@
     "property_name": "3 bed end terrace house for sale",
     "description": "Charming 3-Bedroom End-of-Terrace Home in the Heart of Kingston upon Thames A bright and spacious three-bedroom end-of-terrace house superbly located in one of Kingston upon Thamesâ most convenient and well-connected residential areas. Offering generous living accommodation, excellent outside space and strong transport links, this property is ideal for families, commuters and anyone seeking the perfect balance of town-centre living and suburban comfort. Key Features Ground Floor Kitchen: A functional and welcoming kitchen providing plenty of space for cooking and everyday meal preparation. Positioned to allow ease of movement between living and dining areas. Living Room: A comfortable, naturally lit living room that serves as the social hub of the home - perfect for relaxing evenings and hosting guests. Dining Room: A separate dining area designed to accommodate family meals and gatherings, with direct flow from the kitchen for ease of use. Bathroom: Conveniently located on the ground floor to serve both family and guests, thoughtfully positioned for ease and accessibility. First Floor Master Bedroom: A well-proportioned principal bedroom, offering a peaceful retreat with space for wardrobes and additional furnishings. Two Further Bedrooms: Two additional bedrooms on the first floor - flexible in use and ideal for children, guests, or a home office. Outdoor &amp; Practical Features Garden: A private rear garden provides a lovely outdoor space for recreation, gardening or simply enjoying fresh air - a rare and valuable asset in this central location. Parking: Off-street parking space for up to three cars on the driveway, a highly practical feature in this sought-after area. Side Access: Useful side access enhances convenience and connectivity between front and rear outdoor spaces. Location &amp; Connectivity This home benefits from an enviable position in the centre of everything - offering the perfect combination of tranquillity and accessibility. Transport Links: At the end of the road is a railway line with regular services into London Waterloo, making daily commuting straightforward. Additional stations are within just 5â10 minutesâ walk, giving flexible options for travel across the capital and beyond. Local Amenities: A wide range of shops, cafes, restaurants and services are easily reachable on foot, with Kingstonâs vibrant town centre just minutes away. Whether itâs high-street retail or independent boutiques, everything you need is close by. Good Local Schools: The area is supported by a selection of well-regarded primary and secondary schools, adding to the appeal for families. Summary This three-bedroom end-of-terrace home offers a thoughtful layout, outdoor space, generous parking and an unbeatable location - all within easy reach of excellent transport links and local amenities. An ideal choice for those seeking comfortable, well-connected living in one of Kingston upon Thamesâ most desirable neighbourhoods. Viewing is highly recommended to fully appreciate the size and potential of this property. Buyer Process: Our customers use British Homebuyers to either purchase or assist in selling properties quickly and reliably. Therefore any new applicants to purchase are subject to vetting to ensure they meet strict criteria. Exclusivity Fee: You can secure the purchase by paying an exclusivity fee of Â£2,000. This grants the buyer exclusive rights to proceed with the purchase for the duration of the conveyancing process, during which time the seller agrees to remove the property from the market and not negotiate with other parties. The exclusivity fee is returned to the buyer upon successful completion of the purchase. A processing fee of Â£200 is required in order to draw up an exclusive legally binding contract between the buyer and seller. This agreement sets out the terms of exclusivity and seller commitment but does not constitute an exchange of contracts. This arrangement provides buyers with reassurance that the property is secured exclusively for them, reducing the risk of gazumping and unnecessary aborted costs. Disclaimer The particulars are set out as a general outline only for the guidance of intended purchasers and do not constitute, any part of a contract. Nothing in these particulars shall be deemed to be a statement that the property is in good structural condition or otherwise nor that any of the services, appliances, equipment or facilities are in good working order. Purchasers should satisfy themselves of this prior to purchasing. The photograph(s) depict only certain parts of the property. It should not be assumed that any contents/furniture etc. Photographed are included in the sale. It should not be assumed that the property remains as displayed in the photograph(s). No assumption should be made with regard to parts of the property that have not been photographed. Any areas, measurements, aspects or distances referred to are given as a guide only and are not precise. If such details are fundamental to a purchase, purchasers must rely on their own enquiries. Descriptions of the property are subjective and are used in good faith as an opinion and not as a statement of fact. Please make further inquiries to ensure that our descriptions are likely to match any expectations you may have. Kitchen (2.9m x 1.66m) Dining Room (3.08m x 1.76m) Living Room (4.1m x 3.85m) Master Bedroom (4.08m x 3.43m) Bedroom 2 (3.73m x 2.71m) Bedroom 3 (2.88m x 1.98m)</strong",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-02-26",
     "postcode": "KT1 3BJ",
     "estimate_price": 610000,
     "estimate_low": 580000,
     "estimate_high": 641000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021764361/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021764361/",
+    "price_delta": -10000,
+    "school_commute_seconds": 1292,
+    "school_commute_text": "22 mins",
+    "school_distance_km": 1.57,
+    "office_commute_seconds": 4061,
+    "office_commute_text": "1 hour 8 mins",
+    "office_distance_km": 22.14
   },
   {
     "property_id": "69361290",
@@ -690,7 +886,14 @@
     "estimate_price": 792000,
     "estimate_low": 752000,
     "estimate_high": 832000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021789092/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021789092/",
+    "price_delta": -12000,
+    "school_commute_seconds": 1215,
+    "school_commute_text": "20 mins",
+    "school_distance_km": 3.07,
+    "office_commute_seconds": 4439,
+    "office_commute_text": "1 hour 14 mins",
+    "office_distance_km": 24.22
   },
   {
     "property_id": "69910742",
@@ -711,7 +914,14 @@
     "estimate_price": 1120000,
     "estimate_low": 1010000,
     "estimate_high": 1240000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021760147/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021760147/",
+    "price_delta": 75000,
+    "school_commute_seconds": 561,
+    "school_commute_text": "9 mins",
+    "school_distance_km": 1.83,
+    "office_commute_seconds": 4194,
+    "office_commute_text": "1 hour 10 mins",
+    "office_distance_km": 23.06
   },
   {
     "property_id": "70240310",
@@ -732,7 +942,14 @@
     "estimate_price": 777000,
     "estimate_low": 738000,
     "estimate_high": 816000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021768556/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021768556/",
+    "price_delta": 348000,
+    "school_commute_seconds": 455,
+    "school_commute_text": "8 mins",
+    "school_distance_km": 1.18,
+    "office_commute_seconds": 4906,
+    "office_commute_text": "1 hour 22 mins",
+    "office_distance_km": 28.84
   },
   {
     "property_id": "70568389",
@@ -747,13 +964,20 @@
     "property_name": "5 bed semi-detached house for sale",
     "description": "A substantial five bedroom semi-detached house with large garden and generous off street parking, located in residential road, near the river, Hampton Wick village and station. Offering versatile living space, the ground floor enjoys a 31ft reception/dining room which leads through to a conservatory overlooking the garden and there is also access to a 24ft kitchen/breakfast room. The garage has been converted into a music/games room and there is a guest cloakroom. Across the upper floors, there are five bedrooms and three bathrooms, one en-suite to the principal room. Externally, there is a fabulous garden extending to 82ft with mature trees and borders, a shed at the rear, and generous off street parking for three cars.",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-01-19",
     "postcode": "KT1 4HP",
     "estimate_price": 1500000,
     "estimate_low": 1430000,
     "estimate_high": 1580000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100022287920/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100022287920/",
+    "price_delta": 0,
+    "school_commute_seconds": 908,
+    "school_commute_text": "15 mins",
+    "school_distance_km": 2.64,
+    "office_commute_seconds": 4174,
+    "office_commute_text": "1 hour 10 mins",
+    "office_distance_km": 24.49
   },
   {
     "property_id": "70779976",
@@ -764,7 +988,7 @@
     "latitude": 51.406914,
     "longitude": -0.307421,
     "detail_url": "https://www.zoopla.co.uk/for-sale/details/70779976/",
-    "uprn": "",
+    "uprn": NaN,
     "property_name": "3 bed terraced house for sale",
     "description": "Located moments from Kingston town centre, this lovely 3-double bedroom family home offers 3 floors of bright and spacious living, a private terrace and gated parking bay whilst a stones throw from Central Kingston. East Lane is situated moments from the vast selection of shops, eateries and entertainment facilities found in Kingston town centre. There is also excellent transport links and the river Thames tow-path close-by. Please use the reference CHPK2921915 when contacting Foxtons.",
     "tenure": "freehold",
@@ -774,7 +998,14 @@
     "estimate_price": null,
     "estimate_low": null,
     "estimate_high": null,
-    "estimate_url": ""
+    "estimate_url": NaN,
+    "price_delta": null,
+    "school_commute_seconds": 625,
+    "school_commute_text": "10 mins",
+    "school_distance_km": 2.11,
+    "office_commute_seconds": 4302,
+    "office_commute_text": "1 hour 12 mins",
+    "office_distance_km": 24.2
   },
   {
     "property_id": "70957126",
@@ -795,7 +1026,14 @@
     "estimate_price": 843000,
     "estimate_low": 801000,
     "estimate_high": 885000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021767350/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021767350/",
+    "price_delta": 7000,
+    "school_commute_seconds": 627,
+    "school_commute_text": "10 mins",
+    "school_distance_km": 0.76,
+    "office_commute_seconds": 4268,
+    "office_commute_text": "1 hour 11 mins",
+    "office_distance_km": 23.02
   },
   {
     "property_id": "71161248",
@@ -810,13 +1048,20 @@
     "property_name": "5 bed terraced house for sale",
     "description": "Is this the best value 5 bedroom home in Hampton Wick Currently? With an unrivalled spec, space and location most would be envious of this will not stick around for long... - James (Co-Owner Devenports) This part of Hampton Wick has never been so popular with the demand for the area's homes at record levels, the only issue being very few properties have been to market recently that fit this profile. This large five-bedroom home is going to be turning some heads. With build quality that is second to none. Measuring nearly 1800 square foot, the property boasts extensive living space, five bedrooms, three bathrooms, and a sizable show piece kitchen. Still looking for more? Old Bakery Mews is a sought after and exclusive development in the heart of Hampton Wick. The development is within catchment of many of the area's most sought after schools and is so popular with buyers due to it's proximity to both the Train Station &amp; The River Thames.",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2025-08-28",
     "postcode": "KT1 4DB",
     "estimate_price": null,
     "estimate_low": null,
     "estimate_high": null,
-    "estimate_url": ""
+    "estimate_url": NaN,
+    "price_delta": null,
+    "school_commute_seconds": 757,
+    "school_commute_text": "13 mins",
+    "school_distance_km": 1.94,
+    "office_commute_seconds": 3960,
+    "office_commute_text": "1 hour 6 mins",
+    "office_distance_km": 24.22
   },
   {
     "property_id": "71300996",
@@ -837,7 +1082,14 @@
     "estimate_price": 1210000,
     "estimate_low": 1150000,
     "estimate_high": 1270000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021756154/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021756154/",
+    "price_delta": -10000,
+    "school_commute_seconds": 426,
+    "school_commute_text": "7 mins",
+    "school_distance_km": 0.52,
+    "office_commute_seconds": 3968,
+    "office_commute_text": "1 hour 6 mins",
+    "office_distance_km": 22.65
   },
   {
     "property_id": "71317912",
@@ -858,7 +1110,14 @@
     "estimate_price": 902000,
     "estimate_low": 857000,
     "estimate_high": 947000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021764828/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021764828/",
+    "price_delta": -52000,
+    "school_commute_seconds": 886,
+    "school_commute_text": "15 mins",
+    "school_distance_km": 1.85,
+    "office_commute_seconds": 4191,
+    "office_commute_text": "1 hour 10 mins",
+    "office_distance_km": 22.96
   },
   {
     "property_id": "71402086",
@@ -879,7 +1138,14 @@
     "estimate_price": 1010000,
     "estimate_low": 957000,
     "estimate_high": 1060000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021770120/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021770120/",
+    "price_delta": -160000,
+    "school_commute_seconds": 916,
+    "school_commute_text": "15 mins",
+    "school_distance_km": 2.21,
+    "office_commute_seconds": 4357,
+    "office_commute_text": "1 hour 13 mins",
+    "office_distance_km": 23.2
   },
   {
     "property_id": "71476622",
@@ -900,7 +1166,14 @@
     "estimate_price": 799000,
     "estimate_low": 719000,
     "estimate_high": 879000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021759436/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021759436/",
+    "price_delta": -154000,
+    "school_commute_seconds": 736,
+    "school_commute_text": "12 mins",
+    "school_distance_km": 0.88,
+    "office_commute_seconds": 4401,
+    "office_commute_text": "1 hour 13 mins",
+    "office_distance_km": 24.31
   },
   {
     "property_id": "71481869",
@@ -921,7 +1194,14 @@
     "estimate_price": 997000,
     "estimate_low": 947000,
     "estimate_high": 1050000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021760916/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021760916/",
+    "price_delta": 23000,
+    "school_commute_seconds": 74,
+    "school_commute_text": "1 min",
+    "school_distance_km": 0.08,
+    "office_commute_seconds": 3824,
+    "office_commute_text": "1 hour 4 mins",
+    "office_distance_km": 23.64
   },
   {
     "property_id": "71510810",
@@ -936,13 +1216,20 @@
     "property_name": "3 bed semi-detached house for sale",
     "description": "Seymours of Surbiton are delighted to offer to the market this semi-detached house located in a quiet cul-de-sac within easy access of Surbiton and the mainline station. The property offers well-balanced accommodation and further benefits from a secluded garden and off-street parking.",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2025-10-08",
     "postcode": "KT5 8DR",
     "estimate_price": 775000,
     "estimate_low": 736000,
     "estimate_high": 813000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021790604/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021790604/",
+    "price_delta": 0,
+    "school_commute_seconds": 1423,
+    "school_commute_text": "24 mins",
+    "school_distance_km": 3.3,
+    "office_commute_seconds": 4493,
+    "office_commute_text": "1 hour 15 mins",
+    "office_distance_km": 22.68
   },
   {
     "property_id": "71550629",
@@ -963,7 +1250,14 @@
     "estimate_price": 1060000,
     "estimate_low": 1010000,
     "estimate_high": 1110000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/128014005/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/128014005/",
+    "price_delta": -10000,
+    "school_commute_seconds": 406,
+    "school_commute_text": "7 mins",
+    "school_distance_km": 1.12,
+    "office_commute_seconds": 4812,
+    "office_commute_text": "1 hour 20 mins",
+    "office_distance_km": 28.73
   },
   {
     "property_id": "71559546",
@@ -984,7 +1278,14 @@
     "estimate_price": 1180000,
     "estimate_low": 1120000,
     "estimate_high": 1240000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021758221/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021758221/",
+    "price_delta": -30000,
+    "school_commute_seconds": 762,
+    "school_commute_text": "13 mins",
+    "school_distance_km": 2.78,
+    "office_commute_seconds": 4568,
+    "office_commute_text": "1 hour 16 mins",
+    "office_distance_km": 21.61
   },
   {
     "property_id": "71631423",
@@ -999,13 +1300,20 @@
     "property_name": "3 bed semi-detached house for sale",
     "description": "This semi-detached, spacious, four bedroom family home is in the prime Coombe-side location. On the ground floor there is a double reception room with bay windows to the front and rear. From the spacious, separate kitchen/dining room there is a door leading directly into the West facing Garden. Off the kitchen, there is a utility area, which has a W.C. And access to the internal garage, currently used for storage but which could be converted to living space (stpp). Also on the ground floor, there is a good-sized double bedroom which could also be used as a study and a separate reception or play room. On the first floor there is a family bathroom, plus a separate W.C. The master bedroom has a full range of fitted wardrobes and a bay window overlooking the front of the house and there are two further double bedrooms, also with plenty of storage space. The property benefits from lapsed granted planning permission for a first-floor side extension, a single storey rear extension and rear dormer roof extension; making it a perfect property to add significant value if required, but the house already has a good footprint. Beechcroft Avenue is a quiet residential, tree-lined avenue in the heart of New Malden; within a mile of New Malden Rail station with fast links into Waterloo. This house is perfectly situated within the catchment of several good schools and close to multiple playgrounds, Kingston hospital and Coombe Hill Golf club. The property is also within easy reach to the A3 and local bus routes providing access to Kingston and Richmond. New Malden High Street is eclectic, with a variety of local shops, cafes and restaurants. Richmond Park and Wimbledon Common are also close by, offering leisure activities such as cycling and running; and nearby Golf Clubs. EPC D. Council Tax Band F what3words /// sands.back.abode Notice Please note we have not tested any apparatus, fixtures, fittings, or services. Interested parties must undertake their own investigation into the working order of these items. All measurements are approximate and photographs provided for guidance only",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2025-10-23",
     "postcode": "KT3 3EE",
     "estimate_price": 992000,
     "estimate_low": 942000,
     "estimate_high": 1040000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021772809/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021772809/",
+    "price_delta": 3000,
+    "school_commute_seconds": 836,
+    "school_commute_text": "14 mins",
+    "school_distance_km": 2.87,
+    "office_commute_seconds": 4644,
+    "office_commute_text": "1 hour 17 mins",
+    "office_distance_km": 21.7
   },
   {
     "property_id": "71634219",
@@ -1026,7 +1334,14 @@
     "estimate_price": 986000,
     "estimate_low": 936000,
     "estimate_high": 1040000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021755069/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021755069/",
+    "price_delta": -11000,
+    "school_commute_seconds": 605,
+    "school_commute_text": "10 mins",
+    "school_distance_km": 1.52,
+    "office_commute_seconds": 3912,
+    "office_commute_text": "1 hour 5 mins",
+    "office_distance_km": 22.63
   },
   {
     "property_id": "71648402",
@@ -1047,7 +1362,14 @@
     "estimate_price": 889000,
     "estimate_low": 845000,
     "estimate_high": 934000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021794414/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021794414/",
+    "price_delta": 11000,
+    "school_commute_seconds": 1103,
+    "school_commute_text": "18 mins",
+    "school_distance_km": 2.95,
+    "office_commute_seconds": 4327,
+    "office_commute_text": "1 hour 12 mins",
+    "office_distance_km": 24.09
   },
   {
     "property_id": "71816696",
@@ -1068,7 +1390,14 @@
     "estimate_price": 1200000,
     "estimate_low": 1140000,
     "estimate_high": 1260000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021756049/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021756049/",
+    "price_delta": -75000,
+    "school_commute_seconds": 213,
+    "school_commute_text": "4 mins",
+    "school_distance_km": 0.26,
+    "office_commute_seconds": 3890,
+    "office_commute_text": "1 hour 5 mins",
+    "office_distance_km": 23.72
   },
   {
     "property_id": "71821933",
@@ -1089,7 +1418,14 @@
     "estimate_price": 845000,
     "estimate_low": 802000,
     "estimate_high": 887000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021761289/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021761289/",
+    "price_delta": -20000,
+    "school_commute_seconds": 973,
+    "school_commute_text": "16 mins",
+    "school_distance_km": 2.26,
+    "office_commute_seconds": 5235,
+    "office_commute_text": "1 hour 27 mins",
+    "office_distance_km": 28.62
   },
   {
     "property_id": "71834134",
@@ -1110,7 +1446,14 @@
     "estimate_price": 1380000,
     "estimate_low": 1310000,
     "estimate_high": 1450000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021767768/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021767768/",
+    "price_delta": -5000,
+    "school_commute_seconds": 607,
+    "school_commute_text": "10 mins",
+    "school_distance_km": 1.64,
+    "office_commute_seconds": 4982,
+    "office_commute_text": "1 hour 23 mins",
+    "office_distance_km": 28.64
   },
   {
     "property_id": "71861183",
@@ -1131,7 +1474,14 @@
     "estimate_price": 1190000,
     "estimate_low": 1130000,
     "estimate_high": 1250000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100023059041/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100023059041/",
+    "price_delta": 10000,
+    "school_commute_seconds": 737,
+    "school_commute_text": "12 mins",
+    "school_distance_km": 0.9,
+    "office_commute_seconds": 4066,
+    "office_commute_text": "1 hour 8 mins",
+    "office_distance_km": 22.77
   },
   {
     "property_id": "71873458",
@@ -1146,13 +1496,20 @@
     "property_name": "4 bed semi-detached house for sale",
     "description": "Seymours of Surbiton are delighted to offer to the market this spacious family home located conveniently for Surbiton and Kingston town centres. The property offers excellent accommodation and further benefits include a secluded rear garden and ample off-street parking.",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2025-11-24",
     "postcode": "KT1 2TN",
     "estimate_price": 1040000,
     "estimate_low": 992000,
     "estimate_high": 1100000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021763748/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021763748/",
+    "price_delta": -40050,
+    "school_commute_seconds": 1028,
+    "school_commute_text": "17 mins",
+    "school_distance_km": 2.44,
+    "office_commute_seconds": 4380,
+    "office_commute_text": "1 hour 13 mins",
+    "office_distance_km": 22.52
   },
   {
     "property_id": "71900060",
@@ -1173,7 +1530,14 @@
     "estimate_price": 1260000,
     "estimate_low": 1200000,
     "estimate_high": 1320000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021767285/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021767285/",
+    "price_delta": 15000,
+    "school_commute_seconds": 875,
+    "school_commute_text": "15 mins",
+    "school_distance_km": 1.08,
+    "office_commute_seconds": 4283,
+    "office_commute_text": "1 hour 11 mins",
+    "office_distance_km": 23.05
   },
   {
     "property_id": "71925627",
@@ -1194,7 +1558,14 @@
     "estimate_price": 945000,
     "estimate_low": 898000,
     "estimate_high": 992000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021756128/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021756128/",
+    "price_delta": 5000,
+    "school_commute_seconds": 354,
+    "school_commute_text": "6 mins",
+    "school_distance_km": 0.43,
+    "office_commute_seconds": 4031,
+    "office_commute_text": "1 hour 7 mins",
+    "office_distance_km": 23.89
   },
   {
     "property_id": "71948387",
@@ -1215,7 +1586,14 @@
     "estimate_price": 1270000,
     "estimate_low": 1210000,
     "estimate_high": 1340000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021763294/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021763294/",
+    "price_delta": -20000,
+    "school_commute_seconds": 747,
+    "school_commute_text": "12 mins",
+    "school_distance_km": 0.88,
+    "office_commute_seconds": 4172,
+    "office_commute_text": "1 hour 10 mins",
+    "office_distance_km": 24.01
   },
   {
     "property_id": "72012204",
@@ -1236,7 +1614,14 @@
     "estimate_price": 1330000,
     "estimate_low": 1200000,
     "estimate_high": 1470000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021759461/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021759461/",
+    "price_delta": -280000,
+    "school_commute_seconds": 610,
+    "school_commute_text": "10 mins",
+    "school_distance_km": 0.72,
+    "office_commute_seconds": 4075,
+    "office_commute_text": "1 hour 8 mins",
+    "office_distance_km": 23.9
   },
   {
     "property_id": "72044373",
@@ -1251,13 +1636,20 @@
     "property_name": "5 bed detached house for sale",
     "description": "This sizable house ticks boxes in all areas! Renovated to a high standard it offers an unrivalled mix of size and build quality. This is a 'proper family home' with four doubles and one single bedroom, three bathrooms, a ground floor and top floor cloakroom/wc and a family sized garden with outbuildings. Presented in excellent order, buyers will be able to take advantage of a sizeable showpiece kitchen extension and extremely well-proportioned living space. The house continues to impress with the added bonus of off-road parking for three cars with electric vehicle charger and an integral garage.",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2025-12-22",
     "postcode": "KT1 2TL",
     "estimate_price": 1250000,
     "estimate_low": 1180000,
     "estimate_high": 1310000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021763717/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021763717/",
+    "price_delta": -5000,
+    "school_commute_seconds": 961,
+    "school_commute_text": "16 mins",
+    "school_distance_km": 2.35,
+    "office_commute_seconds": 4602,
+    "office_commute_text": "1 hour 17 mins",
+    "office_distance_km": 24.35
   },
   {
     "property_id": "72055808",
@@ -1278,7 +1670,14 @@
     "estimate_price": 652000,
     "estimate_low": 619000,
     "estimate_high": 684000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/128029548/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/128029548/",
+    "price_delta": -2000,
+    "school_commute_seconds": 662,
+    "school_commute_text": "11 mins",
+    "school_distance_km": 2.13,
+    "office_commute_seconds": 4044,
+    "office_commute_text": "1 hour 7 mins",
+    "office_distance_km": 23.88
   },
   {
     "property_id": "72067975",
@@ -1299,7 +1698,14 @@
     "estimate_price": 1100000,
     "estimate_low": 1050000,
     "estimate_high": 1160000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021760798/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021760798/",
+    "price_delta": 0,
+    "school_commute_seconds": 1112,
+    "school_commute_text": "19 mins",
+    "school_distance_km": 1.35,
+    "office_commute_seconds": 4455,
+    "office_commute_text": "1 hour 14 mins",
+    "office_distance_km": 22.6
   },
   {
     "property_id": "72068890",
@@ -1320,7 +1726,14 @@
     "estimate_price": 1190000,
     "estimate_low": 1130000,
     "estimate_high": 1250000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021767056/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021767056/",
+    "price_delta": 10000,
+    "school_commute_seconds": 641,
+    "school_commute_text": "11 mins",
+    "school_distance_km": 1.88,
+    "office_commute_seconds": 4585,
+    "office_commute_text": "1 hour 16 mins",
+    "office_distance_km": 24.34
   },
   {
     "property_id": "72140885",
@@ -1341,7 +1754,14 @@
     "estimate_price": 1090000,
     "estimate_low": 1030000,
     "estimate_high": 1140000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021760222/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021760222/",
+    "price_delta": -90000,
+    "school_commute_seconds": 527,
+    "school_commute_text": "9 mins",
+    "school_distance_km": 1.08,
+    "office_commute_seconds": 4001,
+    "office_commute_text": "1 hour 7 mins",
+    "office_distance_km": 23.85
   },
   {
     "property_id": "72156622",
@@ -1356,13 +1776,20 @@
     "property_name": "3 bed property for sale",
     "description": "A three bedroom terraced house located in a quiet residential road located between both Surbiton and Kingston town centres. The property has a large reception room with conservatory, a large separate modern kitchen, three bedrooms (two doubles and one single) family bathroom and separate WC. Addison Gardens is a residential road that is nicely tucked away in a quiet area. It is a short walk to Surbiton Station and the busy high street with plenty of restaurants, bars and pubs. Tenure: Freehold Council Tax Band: D Information contained within this listing is for guidance only and should be checked and confirmed (prior to proceeding).",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-01-12",
     "postcode": "KT5 8DW",
     "estimate_price": 518000,
     "estimate_low": 492000,
     "estimate_high": 544000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021783204/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021783204/",
+    "price_delta": -18050,
+    "school_commute_seconds": 1391,
+    "school_commute_text": "23 mins",
+    "school_distance_km": 1.72,
+    "office_commute_seconds": 4223,
+    "office_commute_text": "1 hour 10 mins",
+    "office_distance_km": 22.36
   },
   {
     "property_id": "72167384",
@@ -1377,13 +1804,20 @@
     "property_name": "3 bed semi-detached house for sale",
     "description": "Winkworth is delighted to offer this rare opportunity to acquire a charming period home, ideally situated in North Kingston on one of the areaâs most prestigious roads, just off Kings Road and Park Road. The property is moments from Kingston Gate of Richmond Park, providing an abundance of open green space, while also benefiting from an easy commute to Kingston town centre and its key transport links. The property retains its original footprint and offers exceptional scope for improvement. Subject to the usual planning permissions, it can be vastly extended to the rear and also offers potential for a loft conversion, providing the perfect blank canvas for a buyer to create their dream period home in the heart of KT2. The accommodation comprises a welcoming entrance hall leading to two well-proportioned reception rooms and a separate, spacious kitchen/breakfast room. To the first floor are three bedrooms, including two generous double bedrooms and a single bedroom, along with a family bathroom. To the rear is a delightful garden, mainly laid to lawn with established borders, while to the front there is an attractive front garden. Subject to the necessary planning permissions, this offers potential for a dropped kerb and off-road parking in the future. The property is sold with no onward chain, and viewings are highly recommended to fully appreciate the location and the true potential on offer",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-01-13",
     "postcode": "KT2 5JR",
     "estimate_price": 992000,
     "estimate_low": 943000,
     "estimate_high": 1040000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021770757/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021770757/",
+    "price_delta": 3000,
+    "school_commute_seconds": 940,
+    "school_commute_text": "16 mins",
+    "school_distance_km": 1.15,
+    "office_commute_seconds": 4420,
+    "office_commute_text": "1 hour 14 mins",
+    "office_distance_km": 24.36
   },
   {
     "property_id": "72184551",
@@ -1404,7 +1838,14 @@
     "estimate_price": 900000,
     "estimate_low": 855000,
     "estimate_high": 945000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021754672/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021754672/",
+    "price_delta": -200050,
+    "school_commute_seconds": 516,
+    "school_commute_text": "9 mins",
+    "school_distance_km": 1.75,
+    "office_commute_seconds": 4031,
+    "office_commute_text": "1 hour 7 mins",
+    "office_distance_km": 22.84
   },
   {
     "property_id": "72242003",
@@ -1415,7 +1856,7 @@
     "latitude": 51.406545,
     "longitude": -0.307377,
     "detail_url": "https://www.zoopla.co.uk/for-sale/details/72242003/",
-    "uprn": "",
+    "uprn": NaN,
     "property_name": "4 bed terraced house for sale",
     "description": "Set over 4-floors, this bright and spacious 4-bedroom town house offers smart interiors, a 2-car garage, and private garden, all moments from the river Thames and Kingston town centre. Nightingale Mews is situated moments from the vast selection of shops, eateries and entertainment facilities found in Kingston town centre. There is also excellent transport links and the river Thames tow-path close-by. Please use the reference CHPK2921898 when contacting Foxtons.",
     "tenure": "freehold",
@@ -1425,7 +1866,14 @@
     "estimate_price": null,
     "estimate_low": null,
     "estimate_high": null,
-    "estimate_url": ""
+    "estimate_url": NaN,
+    "price_delta": null,
+    "school_commute_seconds": 640,
+    "school_commute_text": "11 mins",
+    "school_distance_km": 2.13,
+    "office_commute_seconds": 4345,
+    "office_commute_text": "1 hour 12 mins",
+    "office_distance_km": 24.26
   },
   {
     "property_id": "72250327",
@@ -1446,7 +1894,14 @@
     "estimate_price": 746000,
     "estimate_low": 709000,
     "estimate_high": 784000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021759010/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021759010/",
+    "price_delta": -21000,
+    "school_commute_seconds": 546,
+    "school_commute_text": "9 mins",
+    "school_distance_km": 0.66,
+    "office_commute_seconds": 4145,
+    "office_commute_text": "1 hour 9 mins",
+    "office_distance_km": 24.03
   },
   {
     "property_id": "72250752",
@@ -1461,13 +1916,20 @@
     "property_name": "3 bed mews for sale",
     "description": "Set in a quiet spot, this superb modern and stylish three bedroom house is located within a highly-desirable gated private development. Just five minute walk of Richmond Park one of London's eight Royal Parks, covering 2500 acres and home to ancient trees, herds of deer and the Isabella Plantation. Good transport links for commuters are also close by with Norbiton Station being a 5 minute walk away, offering easy access into central London. The property benefits from engineered wood flooring, and secure underground parking and a delightful walled private courtyard garden. This charming house comprises: Entrance hallway, downstairs W.C., a modern contemporary fitted kitchen, spacious living room with dining area, bi-fold doors opening to the courtyard garden. First floor: Three bedrooms, with built in wardrobes and family bathroom. With its prime position within the development the neighbourhood itself is highly regarded for the quality of local schools, in both the private and state sectors and for its close proximity to Richmond Park. Additionally, Kingston Town centre with its abundance of retail and boutique shops has the Bentall Centre and numerous restaurants and bars. EPC Rating: C Council Tax Band: E (Royal Borough of Kingston upon Thames) Residents Association annual fee: Â£690.00 Stricter anti-money laundering (aml) guidance for UK estate agent and lettings, agents are mandatory obligations. At a later stage intending purchasers will be asked to go through checks to meet these requirements which will involve a cost. We would ask for co- operation in order that there are no delays in a sale being agreed. For further information please contact us",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-01-23",
     "postcode": "KT2 7PT",
     "estimate_price": 821000,
     "estimate_low": 780000,
     "estimate_high": 862000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021768492/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021768492/",
+    "price_delta": -21000,
+    "school_commute_seconds": 567,
+    "school_commute_text": "9 mins",
+    "school_distance_km": 1.47,
+    "office_commute_seconds": 3780,
+    "office_commute_text": "1 hour 3 mins",
+    "office_distance_km": 22.46
   },
   {
     "property_id": "72291627",
@@ -1488,7 +1950,14 @@
     "estimate_price": 741000,
     "estimate_low": 704000,
     "estimate_high": 778000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021753473/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021753473/",
+    "price_delta": 4000,
+    "school_commute_seconds": 1063,
+    "school_commute_text": "18 mins",
+    "school_distance_km": 1.3,
+    "office_commute_seconds": 4591,
+    "office_commute_text": "1 hour 17 mins",
+    "office_distance_km": 22.77
   },
   {
     "property_id": "72312754",
@@ -1509,7 +1978,14 @@
     "estimate_price": 622000,
     "estimate_low": 591000,
     "estimate_high": 653000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021760970/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021760970/",
+    "price_delta": 3000,
+    "school_commute_seconds": 513,
+    "school_commute_text": "9 mins",
+    "school_distance_km": 0.63,
+    "office_commute_seconds": 4230,
+    "office_commute_text": "1 hour 11 mins",
+    "office_distance_km": 22.99
   },
   {
     "property_id": "72328191",
@@ -1524,13 +2000,20 @@
     "property_name": "4 bed detached house for sale",
     "description": "At just under 2,500 sq.ft, this is a superb four/five bedroom family home, ideally located in North Kingston and offering bright, spacious and character filled accommodation arranged over three generous floors. In addition to the outstanding location and exceptional internal space, the rear garden extends to approximately 100 ft, while the front provides off-street parking for two cars. The property also offers excellent potential for the new owner to extend and personalise, allowing them to add their own specification and style to this already impressive home. The house is ideally positioned on Park Road in North Kingston, just over 350 yards from the entrance to Richmond Park. Latchmere School is less than half a mile away, while Kingston town centre, Fernhill School, The Kingston Academy and Tiffin Girls School are all within a mile, making this an exceptional and centrally located family home with access to an excellent range of schools. Tenure: Freehold Council Tax Band: G Information contained within this listing is for guidance only and should be checked and confirmed (prior to proceeding).",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-02-02",
     "postcode": "KT2 5JZ",
     "estimate_price": 1920000,
     "estimate_low": 1730000,
     "estimate_high": 2120000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021765395/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021765395/",
+    "price_delta": -425000,
+    "school_commute_seconds": 575,
+    "school_commute_text": "10 mins",
+    "school_distance_km": 1.69,
+    "office_commute_seconds": 4383,
+    "office_commute_text": "1 hour 13 mins",
+    "office_distance_km": 23.18
   },
   {
     "property_id": "72340097",
@@ -1541,7 +2024,7 @@
     "latitude": 51.404564,
     "longitude": -0.276998,
     "detail_url": "https://www.zoopla.co.uk/for-sale/details/72340097/",
-    "uprn": "",
+    "uprn": NaN,
     "property_name": "4 bed end terrace house for sale",
     "description": "Perfectly located for a great selection of amenities, this fantastic 4 bedroom house offers bright and spacious reception room, separate dining room, lovely private garden and accessible ground floor shower room. The property is conveniently located for the great selection of amenities found on Kingston Road, as well as within easy reach of Kingston and New Malden high streets. For motorists, there is quick and simple access to the A3. Please use the reference CHPK2848439 when contacting Foxtons.",
     "tenure": "freehold",
@@ -1551,7 +2034,14 @@
     "estimate_price": null,
     "estimate_low": null,
     "estimate_high": null,
-    "estimate_url": ""
+    "estimate_url": NaN,
+    "price_delta": null,
+    "school_commute_seconds": 836,
+    "school_commute_text": "14 mins",
+    "school_distance_km": 2.38,
+    "office_commute_seconds": 4760,
+    "office_commute_text": "1 hour 19 mins",
+    "office_distance_km": 25.13
   },
   {
     "property_id": "72370766",
@@ -1572,7 +2062,14 @@
     "estimate_price": 823000,
     "estimate_low": 782000,
     "estimate_high": 864000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021767610/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021767610/",
+    "price_delta": 152000,
+    "school_commute_seconds": 681,
+    "school_commute_text": "11 mins",
+    "school_distance_km": 2.18,
+    "office_commute_seconds": 4386,
+    "office_commute_text": "1 hour 13 mins",
+    "office_distance_km": 24.31
   },
   {
     "property_id": "72385546",
@@ -1593,7 +2090,14 @@
     "estimate_price": 470000,
     "estimate_low": 447000,
     "estimate_high": 494000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021769827/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021769827/",
+    "price_delta": 20000,
+    "school_commute_seconds": 922,
+    "school_commute_text": "15 mins",
+    "school_distance_km": 1.13,
+    "office_commute_seconds": 4440,
+    "office_commute_text": "1 hour 14 mins",
+    "office_distance_km": 23.25
   },
   {
     "property_id": "72419390",
@@ -1614,7 +2118,14 @@
     "estimate_price": 862000,
     "estimate_low": 819000,
     "estimate_high": 905000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021767232/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021767232/",
+    "price_delta": 3000,
+    "school_commute_seconds": 642,
+    "school_commute_text": "11 mins",
+    "school_distance_km": 0.79,
+    "office_commute_seconds": 4244,
+    "office_commute_text": "1 hour 11 mins",
+    "office_distance_km": 24.15
   },
   {
     "property_id": "72421826",
@@ -1635,7 +2146,14 @@
     "estimate_price": 1070000,
     "estimate_low": 1010000,
     "estimate_high": 1120000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021761113/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021761113/",
+    "price_delta": -145000,
+    "school_commute_seconds": 893,
+    "school_commute_text": "15 mins",
+    "school_distance_km": 2.18,
+    "office_commute_seconds": 4304,
+    "office_commute_text": "1 hour 12 mins",
+    "office_distance_km": 23.15
   },
   {
     "property_id": "72424242",
@@ -1656,7 +2174,14 @@
     "estimate_price": 1050000,
     "estimate_low": 995000,
     "estimate_high": 1100000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021753792/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021753792/",
+    "price_delta": 100000,
+    "school_commute_seconds": 733,
+    "school_commute_text": "12 mins",
+    "school_distance_km": 1.31,
+    "office_commute_seconds": 4069,
+    "office_commute_text": "1 hour 8 mins",
+    "office_distance_km": 22.81
   },
   {
     "property_id": "72455886",
@@ -1677,7 +2202,14 @@
     "estimate_price": 1050000,
     "estimate_low": 843000,
     "estimate_high": 1270000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021764787/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021764787/",
+    "price_delta": 100000,
+    "school_commute_seconds": 700,
+    "school_commute_text": "12 mins",
+    "school_distance_km": 1.23,
+    "office_commute_seconds": 3625,
+    "office_commute_text": "1 hour 0 mins",
+    "office_distance_km": 22.27
   },
   {
     "property_id": "72460401",
@@ -1692,13 +2224,20 @@
     "property_name": "4 bed semi-detached house for sale",
     "description": "This elegantly refurbished, thoughtfully remodelled and extended four bedroom semi-detached home is finished to an exceptional standard, with design-led details throughout that maximise storage and enhance everyday living. Arranged over three floors with driveway parking, the ground floor features a generous reception room, utility, cloakroom/WC and an impressive open plan living/dining/ kitchen opening onto a large southerly facing garden. The first floor offers three bedrooms and a luxurious family bathroom, while the top floor hosts a principal suite with dressing room and stylish shower room with independent access. Additional features include under floor heating, air conditioning and a Cat5e network.",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-02-18",
     "postcode": "KT1 3QX",
     "estimate_price": 1020000,
     "estimate_low": 921000,
     "estimate_high": 1130000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021764796/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021764796/",
+    "price_delta": 275000,
+    "school_commute_seconds": 697,
+    "school_commute_text": "12 mins",
+    "school_distance_km": 1.23,
+    "office_commute_seconds": 3622,
+    "office_commute_text": "1 hour 0 mins",
+    "office_distance_km": 22.27
   },
   {
     "property_id": "72472483",
@@ -1713,13 +2252,20 @@
     "property_name": "3 bed semi-detached house for sale",
     "description": "This beautifully presented three bedroom semi detached home offers modern style and comfortable living. The bright sitting room features a bay window with plantation shutters filling the space with natural light. A charming fireplace provides a warm focal point. The dining room also boasts a feature fireplace and flows open plan into the kitchen/dining area, where roof lights create an airy feel. Bi-fold doors open onto a low-maintenance southerly aspect garden, ideal for outdoor entertaining. Upstairs are three bedrooms and a very smart and tiled family bathroom.",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-02-19",
     "postcode": "KT1 2SH",
     "estimate_price": 770000,
     "estimate_low": 732000,
     "estimate_high": 809000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021765901/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021765901/",
+    "price_delta": -50,
+    "school_commute_seconds": 905,
+    "school_commute_text": "15 mins",
+    "school_distance_km": 1.08,
+    "office_commute_seconds": 4646,
+    "office_commute_text": "1 hour 17 mins",
+    "office_distance_km": 22.84
   },
   {
     "property_id": "72481428",
@@ -1734,13 +2280,20 @@
     "property_name": "3 bed end terrace house for sale",
     "description": "We cannot recall a home at this price point which comes close, either in terms of era, styling, size or location . . In short this is just an amazing listing and buyers will love it! With the accommodation spanning in excess of 1250 sq ft, this three double bedroom semi is a house which is truly 'the real deal' when it comes to the size, specification and location, which many buyers seek and so often struggle to find. Having undergone a comprehensive renovation in 2023, this house has been beautifully extended by the current owners to the highest standard. It's the attention to detail with the styling that serves to distinguish this house from all the competition.",
     "tenure": "freehold",
-    "floor_size": "",
+    "floor_size": NaN,
     "listing_update_date": "2026-02-20",
     "postcode": "KT1 2SF",
     "estimate_price": 794000,
     "estimate_low": 754000,
     "estimate_high": 833000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021754816/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021754816/",
+    "price_delta": 281000,
+    "school_commute_seconds": 789,
+    "school_commute_text": "13 mins",
+    "school_distance_km": 1.6,
+    "office_commute_seconds": 4698,
+    "office_commute_text": "1 hour 18 mins",
+    "office_distance_km": 24.47
   },
   {
     "property_id": "72483561",
@@ -1761,7 +2314,14 @@
     "estimate_price": 764000,
     "estimate_low": 725000,
     "estimate_high": 802000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021768583/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021768583/",
+    "price_delta": -14000,
+    "school_commute_seconds": 141,
+    "school_commute_text": "2 mins",
+    "school_distance_km": 0.17,
+    "office_commute_seconds": 3984,
+    "office_commute_text": "1 hour 6 mins",
+    "office_distance_km": 23.83
   },
   {
     "property_id": "72497098",
@@ -1782,7 +2342,14 @@
     "estimate_price": 908000,
     "estimate_low": 863000,
     "estimate_high": 954000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021770216/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021770216/",
+    "price_delta": -113000,
+    "school_commute_seconds": 723,
+    "school_commute_text": "12 mins",
+    "school_distance_km": 0.87,
+    "office_commute_seconds": 4444,
+    "office_commute_text": "1 hour 14 mins",
+    "office_distance_km": 24.36
   },
   {
     "property_id": "72503958",
@@ -1803,7 +2370,14 @@
     "estimate_price": 857000,
     "estimate_low": 814000,
     "estimate_high": 900000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021763858/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021763858/",
+    "price_delta": -12000,
+    "school_commute_seconds": 760,
+    "school_commute_text": "13 mins",
+    "school_distance_km": 0.92,
+    "office_commute_seconds": 4924,
+    "office_commute_text": "1 hour 22 mins",
+    "office_distance_km": 23.17
   },
   {
     "property_id": "72516355",
@@ -1824,7 +2398,42 @@
     "estimate_price": 804000,
     "estimate_low": 723000,
     "estimate_high": 884000,
-    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021753787/"
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/100021753787/",
+    "price_delta": -24000,
+    "school_commute_seconds": 499,
+    "school_commute_text": "8 mins",
+    "school_distance_km": 1.51,
+    "office_commute_seconds": 4806,
+    "office_commute_text": "1 hour 20 mins",
+    "office_distance_km": 28.72
+  },
+  {
+    "property_id": "72525144",
+    "listing_price": 600000,
+    "beds": 3,
+    "baths": 1,
+    "address": "32 Lower Marsh Lane, Kingston Upon Thames KT1",
+    "latitude": 51.401294,
+    "longitude": -0.292135,
+    "detail_url": "https://www.zoopla.co.uk/for-sale/details/72525144/",
+    "uprn": "128036828",
+    "property_name": "3 bed terraced house for sale",
+    "description": "Charming 3-Bedroom Terraced House in the Heart of Kingston upon Thames A delightful three-bedroom terraced home perfectly positioned in one of Kingstonâs most convenient and well-connected locations. This property combines comfortable, well-proportioned living spaces with easy access to transport, local amenities and schools - ideal for families, first-time buyers, or commuters. Key Features Ground Floor Kitchen: A practical and inviting kitchen space with room for everyday cooking and casual dining. The layout offers potential to personalise or extend (subject to planning) to suit modern living. Living Room: A bright, welcoming living room that forms the heart of the home - perfect for relaxation and entertaining. Natural light flows through, creating a warm and comfortable atmosphere. Bathroom: Located on the ground floor for convenience, the bathroom is well-situated to serve both residents and guests. First Floor Master Bedroom: Generous in size, the master bedroom provides a peaceful retreat with ample storage and room for freestanding furniture. Two Further Bedrooms: Two additional well-proportioned bedrooms that work perfectly as childrenâs rooms, guest rooms or home office/study space. Outdoor Space Garden: A private rear garden offers a peaceful outdoor area to enjoy alfresco dining, gardening or simply relaxing - a valuable addition in this central location. Location &amp; Transport Situated in the centre of everything, this home benefits from superb connectivity and convenience: Transport Links: At the end of the road is the railway line with direct services into London Waterloo, making this an excellent choice for commuters. Additional nearby stations are just a short 5â10 minute walk, offering flexible travel options across the capital and surrounding areas. Local Amenities: Everything you need is close at hand - from shops, cafes and restaurants to supermarkets and local services. The vibrant town centre of Kingston upon Thames is easily accessible on foot, with cultural attractions, leisure facilities and riverside walks adding to its appeal. Good Local Schools: The area is known for its selection of well-regarded primary and secondary schools, making it particularly suitable for families. Summary This three-bedroom terraced house offers a rare blend of central convenience, transport accessibility and comfortable family living. With a thoughtful layout, outdoor space and excellent local facilities, it represents a compelling opportunity in one of Kingston upon Thamesâ most desirable pockets. Viewing is highly recommended to fully appreciate the size and potential of this property. Buyer Process: Our customers use British Homebuyers to either purchase or assist in selling properties quickly and reliably. Therefore any new applicants to purchase are subject to vetting to ensure they meet strict criteria. Exclusivity Fee: You can secure the purchase by paying an exclusivity fee of Â£2,000. This grants the buyer exclusive rights to proceed with the purchase for the duration of the conveyancing process, during which time the seller agrees to remove the property from the market and not negotiate with other parties. The exclusivity fee is returned to the buyer upon successful completion of the purchase. A processing fee of Â£200 is required in order to draw up an exclusive legally binding contract between the buyer and seller. This agreement sets out the terms of exclusivity and seller commitment but does not constitute an exchange of contracts. This arrangement provides buyers with reassurance that the property is secured exclusively for them, reducing the risk of gazumping and unnecessary aborted costs. Disclaimer The particulars are set out as a general outline only for the guidance of intended purchasers and do not constitute, any part of a contract. Nothing in these particulars shall be deemed to be a statement that the property is in good structural condition or otherwise nor that any of the services, appliances, equipment or facilities are in good working order. Purchasers should satisfy themselves of this prior to purchasing. The photograph(s) depict only certain parts of the property. It should not be assumed that any contents/furniture etc. Photographed are included in the sale. It should not be assumed that the property remains as displayed in the photograph(s). No assumption should be made with regard to parts of the property that have not been photographed. Any areas, measurements, aspects or distances referred to are given as a guide only and are not precise. If such details are fundamental to a purchase, purchasers must rely on their own enquiries. Descriptions of the property are subjective and are used in good faith as an opinion and not as a statement of fact. Please make further inquiries to ensure that our descriptions are likely to match any expectations you may have. Kitchen (4.09m x 3.92m) Living Room (3.12m x 2.9m) Master Bedroom (4.21m x 3.42m) Bedroom 2 (3.85m x 2.81m) Bedroom 3 (2.86m x 1.98m)</strong",
+    "tenure": "freehold",
+    "floor_size": NaN,
+    "listing_update_date": "2026-02-26",
+    "postcode": "KT1 3BJ",
+    "estimate_price": 626000,
+    "estimate_low": 595000,
+    "estimate_high": 658000,
+    "estimate_url": "https://www.zoopla.co.uk/property/uprn/128036828/",
+    "price_delta": -26000,
+    "school_commute_seconds": 1221,
+    "school_commute_text": "20 mins",
+    "school_distance_km": 1.49,
+    "office_commute_seconds": 4129,
+    "office_commute_text": "1 hour 9 mins",
+    "office_distance_km": 22.23
   },
   {
     "property_id": "68802386",
@@ -1845,6 +2454,13 @@
     "estimate_price": null,
     "estimate_low": null,
     "estimate_high": null,
-    "estimate_url": NaN
+    "estimate_url": NaN,
+    "price_delta": null,
+    "school_commute_seconds": 350,
+    "school_commute_text": "6 mins",
+    "school_distance_km": 0.42,
+    "office_commute_seconds": 4173,
+    "office_commute_text": "1 hour 10 mins",
+    "office_distance_km": 24.05
   }
 ]

@@ -30,6 +30,26 @@ class Property:
     estimate_high: Optional[int] = None
     estimate_url: str = ""
 
+    # --- Derived ---
+    price_delta: Optional[int] = None  # listing_price - estimate_price
+
+    # --- Commute: kids school (51.41188, -0.29607) arriving 08:30 ---
+    school_commute_seconds: Optional[int] = None
+    school_commute_text: str = ""
+    school_distance_km: Optional[float] = None
+
+    # --- Commute: office (51.51922, -0.09738) arriving 10:00 ---
+    office_commute_seconds: Optional[int] = None
+    office_commute_text: str = ""
+    office_distance_km: Optional[float] = None
+
+    def compute_derived(self):
+        """Recompute fields derived from other fields."""
+        if self.listing_price is not None and self.estimate_price is not None:
+            self.price_delta = self.listing_price - self.estimate_price
+        else:
+            self.price_delta = None
+
     def to_dict(self) -> dict:
         return asdict(self)
 
