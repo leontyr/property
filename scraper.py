@@ -113,7 +113,7 @@ _SEARCH_FIELDS = {"listing_price", "beds", "baths", "latitude", "longitude"}
 
 
 def save_results(properties: list[Property], output_path: Path):
-    """Save results as JSON and CSV."""
+    """Save results as JSON, CSV, and web/properties_data.js."""
     output_path.parent.mkdir(exist_ok=True)
     records = [p.to_dict() for p in properties]
 
@@ -127,6 +127,14 @@ def save_results(properties: list[Property], output_path: Path):
     df = pd.DataFrame(records)
     df.to_csv(csv_path, index=False)
     logger.info("Saved CSV → %s", csv_path)
+
+    # JS data file for the web viewer
+    js_path = Path("web") / "properties_data.js"
+    if js_path.parent.exists():
+        js_body = json.dumps(records, indent=2, ensure_ascii=False)
+        with open(js_path, "w", encoding="utf-8") as f:
+            f.write(f"window_properties = {js_body};\n")
+        logger.info("Saved JS data → %s", js_path)
 
 
 # ---------------------------------------------------------------------------
