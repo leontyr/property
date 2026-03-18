@@ -117,7 +117,7 @@ async function initMap() {
                 <span style="margin-left:6px;color:#555;">${p.beds || '?'} bed · ${p.baths || '?'} bath · ${tenureText}${floorText}</span><br>
                 <span style="color:#333;">${p.address || ''}</span><br>
                 <div style="margin:6px 0;padding:4px 0;border-top:1px solid #eee;border-bottom:1px solid #eee;">
-                    <strong>Estimate:</strong> ${estLine}<br>
+                    <strong>Estimate:</strong> ${p.estimate_url ? `<a href="${p.estimate_url}" target="_blank">${estLine}</a>` : estLine}<br>
                     <strong>Delta:</strong> ${deltaHtml(p.price_delta)}
                 </div>
                 <strong>Commute:</strong><br>
