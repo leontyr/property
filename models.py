@@ -37,11 +37,13 @@ class Property:
     school_commute_seconds: Optional[int] = None
     school_commute_text: str = ""
     school_distance_km: Optional[float] = None
+    school_commute_url: str = ""
 
     # --- Commute: office (51.51922, -0.09738) arriving 10:00 ---
     office_commute_seconds: Optional[int] = None
     office_commute_text: str = ""
     office_distance_km: Optional[float] = None
+    office_commute_url: str = ""
 
     def compute_derived(self):
         """Recompute fields derived from other fields."""
@@ -49,6 +51,12 @@ class Property:
             self.price_delta = self.listing_price - self.estimate_price
         else:
             self.price_delta = None
+
+        if self.latitude and self.longitude:
+            origin = f"{self.latitude},{self.longitude}"
+            base = "https://www.google.com/maps/dir/?api=1&travelmode=transit"
+            self.school_commute_url = f"{base}&origin={origin}&destination=51.41188,-0.29607"
+            self.office_commute_url = f"{base}&origin={origin}&destination=51.51922,-0.09738"
 
     def to_dict(self) -> dict:
         return asdict(self)
