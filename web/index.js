@@ -8,6 +8,16 @@ function fmt(n) {
     return '£' + Math.round(n).toLocaleString('en-GB');
 }
 
+function isRecent(dateStr) {
+    if (!dateStr) return false;
+    const d = new Date(dateStr);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const threeDaysAgo = new Date(today);
+    threeDaysAgo.setDate(today.getDate() - 2);
+    return d >= threeDaysAgo;
+}
+
 function deltaHtml(delta) {
     if (delta == null) return '';
     const sign = delta >= 0 ? '+' : '−';
@@ -85,10 +95,12 @@ async function initMap() {
         const price = p.listing_price || 0;
         const scaleVal = 0.8 + ((Math.min(Math.max(price, 500000), 1500000) - 500000) / 1000000) * 0.7;
 
+        const recent = isRecent(p.listing_update_date);
         const pin = new PinElement({
             glyphText: (p.beds || '?').toString(),
             glyphColor: 'white',
-            background: 'green',
+            background: recent ? '#e65100' : 'green',
+            borderColor:  recent ? '#bf360c' : '#2e7d32',
             scale: scaleVal,
         });
 
@@ -110,12 +122,19 @@ async function initMap() {
         const estLine = p.estimate_price != null
             ? `${fmt(p.estimate_price)} <span style="color:#888;font-size:0.9em;">(${fmt(p.estimate_low)} – ${fmt(p.estimate_high)})</span>`
             : '—';
+        const updatedBadge = recent
+            ? `<span style="background:#e65100;color:white;font-size:0.75em;font-weight:700;padding:1px 5px;border-radius:3px;margin-left:4px;">NEW</span>`
+            : '';
+        const updatedText = p.listing_update_date
+            ? `<span style="color:#888;font-size:0.85em;">Updated: ${p.listing_update_date}${updatedBadge}</span>`
+            : '';
 
         const infoContent = `
             <div style="max-width:280px;font-family:sans-serif;font-size:13px;line-height:1.5;">
                 <a href="${p.detail_url}" target="_blank" style="font-size:1.1em;font-weight:700;color:#0066cc;">${fmt(p.listing_price)}</a>
                 <span style="margin-left:6px;color:#555;">${p.beds || '?'} bed · ${p.baths || '?'} bath · ${tenureText}${floorText}</span><br>
                 <span style="color:#333;">${p.address || ''}</span><br>
+                ${updatedText}<br>
                 <div style="margin:6px 0;padding:4px 0;border-top:1px solid #eee;border-bottom:1px solid #eee;">
                     <strong>Estimate:</strong> ${p.estimate_url ? `<a href="${p.estimate_url}" target="_blank">${estLine}</a>` : estLine}<br>
                     <strong>Delta:</strong> ${deltaHtml(p.price_delta)}
