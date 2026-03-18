@@ -57,8 +57,8 @@ async function initMap() {
 
     // Read URL params for filtering
     const urlParams = new URLSearchParams(window.location.search);
-    const maxSchool = parseInt(urlParams.get('school_max')) || 1100;
-    const maxOffice = parseInt(urlParams.get('office_max')) || 4000;
+    const maxSchool = parseInt(urlParams.get('school_max')) || 1500;
+    const maxOffice = parseInt(urlParams.get('office_max')) || 4100;
     const maxPrice = parseInt(urlParams.get('price_max')) || 1500000;
 
     document.getElementById('school_max').value = maxSchool;
