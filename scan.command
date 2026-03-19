@@ -5,4 +5,10 @@ cd /Users/bytedance/Documents/projects/vibe/propertyclaude && \
   --max-pages 99 \
   --no-headless \
   --gmaps-key "AIzaSyCXRSodNEdUymcWkzu3OPSOrexGg47KR-A" \
-  --verbose
+  --verbose && \
+git -C /Users/bytedance/Documents/projects/vibe/propertyclaude \
+  add web/properties_data.js && \
+git -C /Users/bytedance/Documents/projects/vibe/propertyclaude \
+  commit -m "Update properties_data.js" --allow-empty && \
+git -C /Users/bytedance/Documents/projects/vibe/propertyclaude \
+  push
