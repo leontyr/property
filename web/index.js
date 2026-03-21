@@ -13,9 +13,9 @@ function isRecent(dateStr) {
     const d = new Date(dateStr);
     const today = new Date();
     today.setHours(0, 0, 0, 0);
-    const threeDaysAgo = new Date(today);
-    threeDaysAgo.setDate(today.getDate() - 2);
-    return d >= threeDaysAgo;
+    const recentDaysAgo = new Date(today);
+    recentDaysAgo.setDate(today.getDate() - 7);
+    return d >= recentDaysAgo;
 }
 
 function deltaHtml(delta) {
@@ -67,9 +67,9 @@ async function initMap() {
 
     // Read URL params for filtering
     const urlParams = new URLSearchParams(window.location.search);
-    const maxSchool   = parseInt(urlParams.get('school_max'))  || 1500;
-    const maxOffice   = parseInt(urlParams.get('office_max'))  || 4100;
-    const maxPrice    = parseInt(urlParams.get('price_max'))   || 1500000;
+    const maxSchool = parseInt(urlParams.get('school_max')) || 1500;
+    const maxOffice = parseInt(urlParams.get('office_max')) || 4100;
+    const maxPrice = parseInt(urlParams.get('price_max')) || 1500000;
     const chainFreeOnly = urlParams.get('chain_free_only') === '1';
 
     document.getElementById('school_max').value = maxSchool;
@@ -79,7 +79,7 @@ async function initMap() {
 
     function secsToText(s) {
         const m = Math.round(s / 60);
-        return m >= 60 ? `${Math.floor(m/60)} hr ${m%60} min` : `${m} min`;
+        return m >= 60 ? `${Math.floor(m / 60)} hr ${m % 60} min` : `${m} min`;
     }
     document.getElementById('school_max_text').textContent = secsToText(maxSchool);
     document.getElementById('office_max_text').textContent = secsToText(maxOffice);
@@ -110,7 +110,7 @@ async function initMap() {
             glyphText: (p.beds || '?').toString(),
             glyphColor: 'white',
             background: recent ? '#e65100' : 'green',
-            borderColor:  recent ? '#bf360c' : '#2e7d32',
+            borderColor: recent ? '#bf360c' : '#2e7d32',
             scale: scaleVal,
         });
 
@@ -126,10 +126,10 @@ async function initMap() {
         const tenureText = p.tenure
             ? p.tenure.charAt(0).toUpperCase() + p.tenure.slice(1).toLowerCase()
             : 'Unknown';
-        const floorText  = p.floor_size ? ` · ${p.floor_size} sqft` : '';
+        const floorText = p.floor_size ? ` · ${p.floor_size} sqft` : '';
         const schoolText = p.school_commute_text || '—';
         const officeText = p.office_commute_text || '—';
-        const estLine    = p.estimate_price != null
+        const estLine = p.estimate_price != null
             ? `${fmt(p.estimate_price)} <span style="color:#888;font-size:0.9em;">(${fmt(p.estimate_low)} – ${fmt(p.estimate_high)})</span>`
             : '—';
         const updatedBadge = recent
@@ -141,9 +141,9 @@ async function initMap() {
         const chainBadge = p.chain_free === true
             ? `<span style="background:#1565c0;color:white;font-size:0.75em;font-weight:700;padding:1px 5px;border-radius:3px;margin-left:4px;">CHAIN FREE</span>`
             : '';
-        const epcText   = p.epc_rating        ? `EPC ${p.epc_rating}` : '';
-        const ctbText   = p.council_tax_band   ? `CTB ${p.council_tax_band}` : '';
-        const metaLine  = [epcText, ctbText].filter(Boolean).join(' · ');
+        const epcText = p.epc_rating ? `EPC ${p.epc_rating}` : '';
+        const ctbText = p.council_tax_band ? `CTB ${p.council_tax_band}` : '';
+        const metaLine = [epcText, ctbText].filter(Boolean).join(' · ');
 
         const infoContent = `
             <div style="max-width:280px;font-family:sans-serif;font-size:13px;line-height:1.5;">
