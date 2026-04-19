@@ -213,15 +213,26 @@ def parse_detail(rsc_text: str) -> dict:
             council_tax_band = item.get("value", "")
             break
 
+    # Key features bullets — features.bullets is a list of short strings
+    features_raw = obj.get("features") or {}
+    if isinstance(features_raw, dict):
+        bullets = features_raw.get("bullets") or []
+    elif isinstance(features_raw, list):
+        bullets = features_raw
+    else:
+        bullets = []
+    features = ", ".join(str(b) for b in bullets if b)
+
     logger.debug(
-        "Parsed detail: uprn=%s postcode=%s tenure=%s address=%s chain_free=%s epc=%s ctb=%s",
-        uprn, postcode, tenure, full_address, chain_free, epc_rating, council_tax_band
+        "Parsed detail: uprn=%s postcode=%s tenure=%s address=%s chain_free=%s epc=%s ctb=%s features=%d",
+        uprn, postcode, tenure, full_address, chain_free, epc_rating, council_tax_band, len(bullets)
     )
 
     return {
         "uprn": uprn,
         "property_name": property_name,
         "description": description,
+        "features": features,
         "tenure": tenure,
         "floor_size": floor_size,
         "listing_update_date": listing_update_date,

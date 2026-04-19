@@ -19,6 +19,7 @@ class Property:
     uprn: str = ""
     property_name: str = ""
     description: str = ""
+    features: str = ""        # comma-separated key feature bullets
     tenure: str = ""
     floor_size: str = ""
     listing_update_date: str = ""

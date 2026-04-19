@@ -288,10 +288,10 @@ async def scrape(
                                 if value:
                                     setattr(prop, field, value)
 
-                    # Stage 3: LLM metadata extraction from description
+                    # Stage 3: LLM metadata extraction from description + features
                     if prop.description:
                         try:
-                            meta = extract_property_metadata(prop.description)
+                            meta = extract_property_metadata(prop.description, prop.features)
                             for field, value in metadata_to_fields(meta).items():
                                 setattr(prop, field, value)
                             logger.debug("Metadata extracted for %s: garden=%s parking=%s",

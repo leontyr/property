@@ -116,6 +116,28 @@ class PropertyMetadata(BaseModel):
     ] = "Unknown"
     river_proximity: str = "None"
 
+    @model_validator(mode="before")
+    @classmethod
+    def normalize_keys(cls, data):
+        if not isinstance(data, dict):
+            return data
+        # model sometimes uses garden_aspect instead of garden_facing
+        if "garden_aspect" in data and "garden_facing" not in data:
+            data["garden_facing"] = data.pop("garden_aspect")
+        # model sometimes uses parking instead of parking_ev
+        if "parking" in data and "parking_ev" not in data:
+            p = data.pop("parking")
+            if isinstance(p, dict):
+                data["parking_ev"] = {
+                    "parking_type": p.get("parking_type") or "None",
+                    "spaces": p.get("spaces") or 0,
+                    "ev_charger": p.get("ev_charger") or False,
+                }
+        # model sometimes uses development instead of development_potential
+        if "development" in data and "development_potential" not in data:
+            data["development_potential"] = data.pop("development")
+        return data
+
     @field_validator("garden_facing", mode="before")
     @classmethod
     def coerce_garden(cls, v):
@@ -208,7 +230,7 @@ Return ONLY valid JSON. No commentary, no markdown, no explanation."""
 
 # ── Extraction function ──────────────────────────────────────────────────────
 
-def extract_property_metadata(description: str) -> PropertyMetadata:
+def extract_property_metadata(description: str, features: str = "") -> PropertyMetadata:
     """
     Extract structured metadata from a property description.
     Returns a validated PropertyMetadata object.
@@ -217,11 +239,15 @@ def extract_property_metadata(description: str) -> PropertyMetadata:
     if not description or not description.strip():
         return PropertyMetadata()
 
+    user_content = f"Property description:\n\n{description}"
+    if features and features.strip():
+        user_content += f"\n\nKey features:\n{features}"
+
     for attempt in range(2):
         try:
             messages = [
                 {"role": "system", "content": _SYSTEM_PROMPT},
-                {"role": "user",   "content": f"Property description:\n\n{description}"},
+                {"role": "user",   "content": user_content},
             ]
             if attempt == 1:
                 messages.append({
