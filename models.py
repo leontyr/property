@@ -33,6 +33,20 @@ class Property:
     estimate_high: Optional[int] = None
     estimate_url: str = ""
 
+    # --- LLM-extracted metadata ---
+    garden_facing: str = ""
+    dev_types: str = ""           # comma-separated: "Loft,Rear"
+    dev_planning: str = ""        # "Granted" | "Lapsed" | "Potential" | "None"
+    dev_unmodernized: Optional[bool] = None
+    parking_type: str = ""
+    parking_spaces: Optional[int] = None
+    parking_ev: Optional[bool] = None
+    outdoor_space: str = ""
+    period_features: Optional[bool] = None
+    double_glazing: Optional[bool] = None
+    quiet_rating: str = ""
+    river_proximity: str = ""
+
     # --- Derived ---
     price_delta: Optional[int] = None  # listing_price - estimate_price
 

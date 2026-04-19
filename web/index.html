@@ -24,6 +24,20 @@
                         <input type="checkbox" id="chain_free_only" name="chain_free_only" value="1" />
                         Chain free only
                     </label>
+                    <label style="display:block;margin-top:8px;">Garden facing:<br/>
+                        <select id="garden_facing" name="garden_facing" style="margin-top:3px;">
+                            <option value="">Any</option>
+                            <option value="South">☀️ South</option>
+                            <option value="South-West">🌤️ South-West</option>
+                            <option value="South-East">🌤️ South-East</option>
+                            <option value="West">🌥️ West</option>
+                            <option value="East">🌥️ East</option>
+                            <option value="North">🌑 North</option>
+                            <option value="North-West">🌑 North-West</option>
+                            <option value="North-East">🌑 North-East</option>
+                            <option value="Unknown">Unknown</option>
+                        </select>
+                    </label>
                     <button type="submit" style="margin-top:10px;">Filter</button>
                 </form>
                 <div id="result-count"></div>

@@ -32,6 +32,7 @@ from parsers.search import parse_listings, parse_pagination, extract_listing_sum
 from parsers.detail import parse_detail
 from parsers.estimate import parse_estimate
 from commute import enrich_commutes
+from extract_metadata import extract_property_metadata, metadata_to_fields
 
 logging.basicConfig(
     level=logging.INFO,
@@ -83,6 +84,7 @@ def load_existing(output_path: Path) -> dict[str, dict]:
         "estimate_price", "estimate_low", "estimate_high",
         "price_delta",
         "school_commute_seconds", "office_commute_seconds",
+        "parking_spaces",
     ]
     float_cols = ["latitude", "longitude", "school_distance_km", "office_distance_km"]
     for col in int_cols:
@@ -286,7 +288,18 @@ async def scrape(
                                 if value:
                                     setattr(prop, field, value)
 
-                    # Stage 3: estimate page (skip if no UPRN)
+                    # Stage 3: LLM metadata extraction from description
+                    if prop.description:
+                        try:
+                            meta = extract_property_metadata(prop.description)
+                            for field, value in metadata_to_fields(meta).items():
+                                setattr(prop, field, value)
+                            logger.debug("Metadata extracted for %s: garden=%s parking=%s",
+                                         prop.property_id, prop.garden_facing, prop.parking_type)
+                        except Exception as e:
+                            logger.warning("Metadata extraction failed for %s: %s", prop.property_id, e)
+
+                    # Stage 4: estimate page (skip if no UPRN)
                     if prop.uprn and prop.uprn != "None":
                         estimates = await scrape_estimate_page(
                             browser, prop.uprn, save_samples, first_estimate

@@ -71,11 +71,13 @@ async function initMap() {
     const maxOffice = parseInt(urlParams.get('office_max')) || 4100;
     const maxPrice = parseInt(urlParams.get('price_max')) || 1500000;
     const chainFreeOnly = urlParams.get('chain_free_only') === '1';
+    const gardenFacing = urlParams.get('garden_facing') || '';
 
     document.getElementById('school_max').value = maxSchool;
     document.getElementById('office_max').value = maxOffice;
     document.getElementById('price_max').value = maxPrice;
     document.getElementById('chain_free_only').checked = chainFreeOnly;
+    document.getElementById('garden_facing').value = gardenFacing;
 
     function secsToText(s) {
         const m = Math.round(s / 60);
@@ -88,7 +90,8 @@ async function initMap() {
         (p.school_commute_seconds == null || p.school_commute_seconds <= maxSchool) &&
         (p.office_commute_seconds == null || p.office_commute_seconds <= maxOffice) &&
         (p.listing_price == null || p.listing_price <= maxPrice) &&
-        (!chainFreeOnly || p.chain_free === true)
+        (!chainFreeOnly || p.chain_free === true) &&
+        (!gardenFacing || p.garden_facing === gardenFacing)
     );
 
     filtered.sort((a, b) => (a.school_commute_seconds || 99999) - (b.school_commute_seconds || 99999));
@@ -145,12 +148,31 @@ async function initMap() {
         const ctbText = p.council_tax_band ? `CTB ${p.council_tax_band}` : '';
         const metaLine = [epcText, ctbText].filter(Boolean).join(' · ');
 
+        // LLM metadata lines
+        const gardenIcon = {'South':'☀️','South-West':'🌤️','South-East':'🌤️','West':'🌥️','East':'🌥️','North':'🌑','North-East':'🌑','North-West':'🌑'};
+        const gardenText  = p.garden_facing && p.garden_facing !== 'Unknown'
+            ? `${gardenIcon[p.garden_facing]||''}${p.garden_facing}-facing` : '';
+        const outdoorText = p.outdoor_space  && p.outdoor_space  !== 'None'    ? p.outdoor_space : '';
+        const parkingText = p.parking_type   && p.parking_type   !== 'None'
+            ? `🚗 ${p.parking_type}${p.parking_spaces > 0 ? ` ×${p.parking_spaces}` : ''}${p.parking_ev ? ' ⚡' : ''}` : '';
+        const devText     = p.dev_types && p.dev_types !== 'None'
+            ? `🏗 ${p.dev_types}${p.dev_planning && p.dev_planning !== 'None' ? ` (${p.dev_planning})` : ''}` : '';
+        const quietText   = p.quiet_rating    && p.quiet_rating   !== 'Unknown' ? `🤫 ${p.quiet_rating}` : '';
+        const riverText   = p.river_proximity && p.river_proximity !== 'None'   ? `🌊 ${p.river_proximity}` : '';
+        const periodText  = p.period_features  ? '🏛 Period' : '';
+        const glazingText = p.double_glazing   ? '🪟 DG' : '';
+        const unmodText   = p.dev_unmodernized ? '🔧 Needs work' : '';
+        const llmLine1 = [gardenText, outdoorText, parkingText].filter(Boolean).join(' · ');
+        const llmLine2 = [devText, quietText, riverText, periodText, glazingText, unmodText].filter(Boolean).join(' · ');
+
         const infoContent = `
             <div style="max-width:280px;font-family:sans-serif;font-size:13px;line-height:1.5;">
                 <a href="${p.detail_url}" target="_blank" style="font-size:1.1em;font-weight:700;color:#0066cc;">${fmt(p.listing_price)}</a>
                 <span style="margin-left:6px;color:#555;">${p.beds || '?'} bed · ${p.baths || '?'} bath · ${tenureText}${floorText}</span><br>
                 <span style="color:#333;">${p.address || ''}</span>${chainBadge}<br>
                 ${updatedText}${metaLine ? `<br><span style="color:#666;font-size:0.85em;">${metaLine}</span>` : ''}
+                ${llmLine1 ? `<br><span style="font-size:0.85em;color:#444;">${llmLine1}</span>` : ''}
+                ${llmLine2 ? `<br><span style="font-size:0.85em;color:#666;">${llmLine2}</span>` : ''}
                 <div style="margin:6px 0;padding:4px 0;border-top:1px solid #eee;border-bottom:1px solid #eee;">
                     <strong>Estimate:</strong> ${p.estimate_url ? `<a href="${p.estimate_url}" target="_blank">${estLine}</a>` : estLine}<br>
                     <strong>Delta:</strong> ${deltaHtml(p.price_delta)}
@@ -173,6 +195,8 @@ async function initMap() {
             <h3><a href="${p.detail_url}" target="_blank" style="color:inherit;text-decoration:none;">${fmt(p.listing_price)}</a>${chainBadge}</h3>
             <p style="margin:2px 0;">${p.address || ''}</p>
             <p style="margin:2px 0;color:#888;">${p.beds || '?'} bed · ${p.baths || '?'} bath · ${tenureText}${floorText}${metaLine ? ' · ' + metaLine : ''}</p>
+            ${llmLine1 ? `<p style="margin:2px 0;font-size:0.85em;color:#444;">${llmLine1}</p>` : ''}
+            ${llmLine2 ? `<p style="margin:2px 0;font-size:0.85em;color:#666;">${llmLine2}</p>` : ''}
             <p style="margin:4px 0;">
                 Est: ${p.estimate_price != null ? fmt(p.estimate_price) : '—'}
                 <span style="font-size:0.85em;color:#888;">(${fmt(p.estimate_low)} – ${fmt(p.estimate_high)})</span>
