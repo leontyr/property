@@ -59,7 +59,7 @@ async function initMap() {
     // Office
     new AdvancedMarkerElement({
         map,
-        position: { lat: 51.51922, lng: -0.09738 },
+        position: { lat: 51.52281, lng: -0.09015 },
         title: "Office",
         content: new PinElement({ glyphText: "O", background: "black", glyphColor: "white" }),
         zIndex: 1000,
@@ -149,19 +149,19 @@ async function initMap() {
         const metaLine = [epcText, ctbText].filter(Boolean).join(' · ');
 
         // LLM metadata lines
-        const gardenIcon = {'South':'☀️','South-West':'🌤️','South-East':'🌤️','West':'🌥️','East':'🌥️','North':'🌑','North-East':'🌑','North-West':'🌑'};
-        const gardenText  = p.garden_facing && p.garden_facing !== 'Unknown'
-            ? `${gardenIcon[p.garden_facing]||''}${p.garden_facing}-facing` : '';
-        const outdoorText = p.outdoor_space  && p.outdoor_space  !== 'None'    ? p.outdoor_space : '';
-        const parkingText = p.parking_type   && p.parking_type   !== 'None'
+        const gardenIcon = { 'South': '☀️', 'South-West': '🌤️', 'South-East': '🌤️', 'West': '🌥️', 'East': '🌥️', 'North': '🌑', 'North-East': '🌑', 'North-West': '🌑' };
+        const gardenText = p.garden_facing && p.garden_facing !== 'Unknown'
+            ? `${gardenIcon[p.garden_facing] || ''}${p.garden_facing}-facing` : '';
+        const outdoorText = p.outdoor_space && p.outdoor_space !== 'None' ? p.outdoor_space : '';
+        const parkingText = p.parking_type && p.parking_type !== 'None'
             ? `🚗 ${p.parking_type}${p.parking_spaces > 0 ? ` ×${p.parking_spaces}` : ''}${p.parking_ev ? ' ⚡' : ''}` : '';
-        const devText     = p.dev_types && p.dev_types !== 'None'
+        const devText = p.dev_types && p.dev_types !== 'None'
             ? `🏗 ${p.dev_types}${p.dev_planning && p.dev_planning !== 'None' ? ` (${p.dev_planning})` : ''}` : '';
-        const quietText   = p.quiet_rating    && p.quiet_rating   !== 'Unknown' ? `🤫 ${p.quiet_rating}` : '';
-        const riverText   = p.river_proximity && p.river_proximity !== 'None'   ? `🌊 ${p.river_proximity}` : '';
-        const periodText  = p.period_features  ? '🏛 Period' : '';
-        const glazingText = p.double_glazing   ? '🪟 DG' : '';
-        const unmodText   = p.dev_unmodernized ? '🔧 Needs work' : '';
+        const quietText = p.quiet_rating && p.quiet_rating !== 'Unknown' ? `🤫 ${p.quiet_rating}` : '';
+        const riverText = p.river_proximity && p.river_proximity !== 'None' ? `🌊 ${p.river_proximity}` : '';
+        const periodText = p.period_features ? '🏛 Period' : '';
+        const glazingText = p.double_glazing ? '🪟 DG' : '';
+        const unmodText = p.dev_unmodernized ? '🔧 Needs work' : '';
         const llmLine1 = [gardenText, outdoorText, parkingText].filter(Boolean).join(' · ');
         const llmLine2 = [devText, quietText, riverText, periodText, glazingText, unmodText].filter(Boolean).join(' · ');
 

@@ -12,7 +12,7 @@ Europe/London timezone (handles BST/GMT automatically).
 
 Destinations:
   - School : (51.41188, -0.29607)  arrive by 08:30
-  - Office : (51.51922, -0.09738)  arrive by 10:00
+  - Office : (51.52281, -0.09015)  arrive by 10:00  [Hylo, 103-105 Bunhill Row EC1Y 8LZ]
 """
 
 import logging
@@ -25,7 +25,7 @@ from typing import Optional
 logger = logging.getLogger("commute")
 
 SCHOOL_LAT, SCHOOL_LNG = 51.41188, -0.29607
-OFFICE_LAT, OFFICE_LNG = 51.51922, -0.09738
+OFFICE_LAT, OFFICE_LNG = 51.52281, -0.09015
 
 ROUTES_URL = "https://routes.googleapis.com/directions/v2:computeRoutes"
 FIELD_MASK = "routes.duration,routes.distanceMeters,routes.localizedValues"

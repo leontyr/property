@@ -57,7 +57,7 @@ class Property:
     school_distance_km: Optional[float] = None
     school_commute_url: str = ""
 
-    # --- Commute: office (51.51922, -0.09738) arriving 10:00 ---
+    # --- Commute: office Hylo, 103-105 Bunhill Row EC1Y 8LZ (51.52281, -0.09015) arriving 10:00 ---
     office_commute_seconds: Optional[int] = None
     office_commute_text: str = ""
     office_distance_km: Optional[float] = None
@@ -74,7 +74,7 @@ class Property:
             origin = f"{self.latitude},{self.longitude}"
             base = "https://www.google.com/maps/dir/?api=1&travelmode=transit"
             self.school_commute_url = f"{base}&origin={origin}&destination=51.41188,-0.29607"
-            self.office_commute_url = f"{base}&origin={origin}&destination=51.51922,-0.09738"
+            self.office_commute_url = f"{base}&origin={origin}&destination=51.52281,-0.09015"
 
     def to_dict(self) -> dict:
         return asdict(self)
