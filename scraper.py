@@ -77,7 +77,10 @@ def load_existing(output_path: Path) -> dict[str, dict]:
     csv_path = output_path.with_suffix(".csv")
     if not csv_path.exists():
         return {}
-    df = pd.read_csv(csv_path, dtype=str)
+    try:
+        df = pd.read_csv(csv_path, dtype=str)
+    except pd.errors.EmptyDataError:
+        return {}
     # Convert numeric-ish columns back
     int_cols = [
         "listing_price", "beds", "baths",
@@ -115,7 +118,7 @@ _SEARCH_FIELDS = {"listing_price", "beds", "baths", "latitude", "longitude"}
 
 
 def save_results(properties: list[Property], output_path: Path):
-    """Save results as JSON, CSV, and web/properties_data.js."""
+    """Save results as JSON, CSV, and properties_data.js."""
     output_path.parent.mkdir(exist_ok=True)
     records = [p.to_dict() for p in properties]
 
@@ -131,8 +134,8 @@ def save_results(properties: list[Property], output_path: Path):
     logger.info("Saved CSV → %s", csv_path)
 
     # JS data file for the web viewer
-    js_path = Path("web") / "properties_data.js"
-    if js_path.parent.exists():
+    js_path = Path("properties_data.js")
+    if True:
         js_body = json.dumps(records, indent=2, ensure_ascii=False)
         with open(js_path, "w", encoding="utf-8") as f:
             f.write(f"window_properties = {js_body};\n")
