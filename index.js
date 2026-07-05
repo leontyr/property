@@ -165,9 +165,13 @@ async function initMap() {
         const llmLine1 = [gardenText, outdoorText, parkingText].filter(Boolean).join(' · ');
         const llmLine2 = [devText, quietText, riverText, periodText, glazingText, unmodText].filter(Boolean).join(' · ');
 
+        const thumbHtml = p.thumbnail_url
+            ? `<a href="${p.detail_url}" target="_blank"><img src="${p.thumbnail_url}" style="width:100%;border-radius:4px;margin-bottom:6px;display:block;" loading="lazy"/></a>`
+            : '';
+
         const infoContent = `
             <div style="max-width:280px;font-family:sans-serif;font-size:13px;line-height:1.5;">
-                <a href="${p.detail_url}" target="_blank" style="font-size:1.1em;font-weight:700;color:#0066cc;">${fmt(p.listing_price)}</a>
+                ${thumbHtml}<a href="${p.detail_url}" target="_blank" style="font-size:1.1em;font-weight:700;color:#0066cc;">${fmt(p.listing_price)}</a>
                 <span style="margin-left:6px;color:#555;">${p.beds || '?'} bed · ${p.baths || '?'} bath · ${tenureText}${floorText}</span><br>
                 <span style="color:#333;">${p.address || ''}</span>${chainBadge}<br>
                 ${updatedText}${metaLine ? `<br><span style="color:#666;font-size:0.85em;">${metaLine}</span>` : ''}
@@ -192,6 +196,7 @@ async function initMap() {
         const item = document.createElement('div');
         item.className = 'list-item';
         item.innerHTML = `
+            ${p.thumbnail_url ? `<img src="${p.thumbnail_url}" style="width:100%;border-radius:4px;margin-bottom:4px;display:block;" loading="lazy"/>` : ''}
             <h3><a href="${p.detail_url}" target="_blank" style="color:inherit;text-decoration:none;">${fmt(p.listing_price)}</a>${chainBadge}</h3>
             <p style="margin:2px 0;">${p.address || ''}</p>
             <p style="margin:2px 0;color:#888;">${p.beds || '?'} bed · ${p.baths || '?'} bath · ${tenureText}${floorText}${metaLine ? ' · ' + metaLine : ''}</p>

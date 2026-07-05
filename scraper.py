@@ -114,7 +114,7 @@ def load_existing(output_path: Path) -> dict[str, dict]:
 # NOTE: address is intentionally excluded — the detail page gives the more complete
 # version (with door number); we never want to overwrite it with the search-page
 # short form.
-_SEARCH_FIELDS = {"listing_price", "beds", "baths", "latitude", "longitude"}
+_SEARCH_FIELDS = {"listing_price", "beds", "baths", "latitude", "longitude", "thumbnail_url"}
 
 
 def save_results(properties: list[Property], output_path: Path):

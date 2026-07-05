@@ -14,6 +14,7 @@ class Property:
     latitude: Optional[float] = None
     longitude: Optional[float] = None
     detail_url: str = ""
+    thumbnail_url: str = ""
 
     # --- From detail page ---
     uprn: str = ""

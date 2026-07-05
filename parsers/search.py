@@ -148,6 +148,12 @@ def extract_listing_summary(raw: dict) -> dict:
     if detail_url and not detail_url.startswith("http"):
         detail_url = "https://www.zoopla.co.uk" + detail_url
 
+    # Thumbnail — first image in responsiveImgList
+    thumbnail_url = ""
+    img_list = (raw.get("image") or {}).get("responsiveImgList") or []
+    if img_list and isinstance(img_list[0], dict):
+        thumbnail_url = img_list[0].get("src", "")
+
     return {
         "property_id": property_id,
         "listing_price": listing_price,
@@ -157,4 +163,5 @@ def extract_listing_summary(raw: dict) -> dict:
         "latitude": float(latitude) if latitude is not None else None,
         "longitude": float(longitude) if longitude is not None else None,
         "detail_url": detail_url,
+        "thumbnail_url": thumbnail_url,
     }
