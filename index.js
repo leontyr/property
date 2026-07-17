@@ -7,7 +7,17 @@ let infoWindow;
 const FAV_KEY = 'property_favourites';
 let favourites = new Set(JSON.parse(localStorage.getItem(FAV_KEY) || '[]'));
 
+// Filled in after Google Maps loads so toggleFav can rebuild pins
+let PinElementClass = null;
+const markerRegistry = {}; // pid → { marker, beds, recent, scale }
+
 function isFav(pid) { return favourites.has(String(pid)); }
+
+function _pinColors(pid, recent) {
+    if (isFav(pid))  return { bg: '#f9a825', border: '#f57f17' };
+    if (recent)      return { bg: '#e65100', border: '#bf360c' };
+    return           { bg: 'green',   border: '#2e7d32' };
+}
 
 function toggleFav(pid, event) {
     if (event) event.stopPropagation();
@@ -19,6 +29,8 @@ function toggleFav(pid, event) {
     }
     localStorage.setItem(FAV_KEY, JSON.stringify([...favourites]));
     const faved = favourites.has(pid);
+
+    // Update heart buttons and card highlight
     document.querySelectorAll(`.fav-btn[data-pid="${pid}"]`).forEach(btn => {
         btn.textContent = faved ? '❤️' : '🤍';
         btn.title = faved ? 'Remove favourite' : 'Add favourite';
@@ -27,6 +39,19 @@ function toggleFav(pid, event) {
     document.querySelectorAll(`.list-item[data-pid="${pid}"]`).forEach(el => {
         el.classList.toggle('list-item--fav', faved);
     });
+
+    // Rebuild map marker pin with updated colour
+    const reg = markerRegistry[pid];
+    if (reg && PinElementClass) {
+        const { bg, border } = _pinColors(pid, reg.recent);
+        reg.marker.content = new PinElementClass({
+            glyphText: reg.beds,
+            glyphColor: 'white',
+            background: bg,
+            borderColor: border,
+            scale: reg.scale,
+        });
+    }
 }
 
 function fmt(n) {
@@ -56,6 +81,7 @@ async function initMap() {
     //@ts-ignore
     const { Map, InfoWindow } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
+    PinElementClass = PinElement;
 
     if (all_properties.length === 0) {
         console.error("Failed to load properties");
@@ -138,11 +164,13 @@ async function initMap() {
         const scaleVal = 0.8 + ((Math.min(Math.max(price, 500000), 1500000) - 500000) / 1000000) * 0.7;
 
         const recent = isRecent(p.listing_update_date);
+        const pid = String(p.property_id);
+        const { bg, border } = _pinColors(pid, recent);
         const pin = new PinElement({
             glyphText: (p.beds || '?').toString(),
             glyphColor: 'white',
-            background: recent ? '#e65100' : 'green',
-            borderColor: recent ? '#bf360c' : '#2e7d32',
+            background: bg,
+            borderColor: border,
             scale: scaleVal,
         });
 
@@ -154,6 +182,7 @@ async function initMap() {
             gmpClickable: true,
         });
         markers.push(marker);
+        markerRegistry[pid] = { marker, beds: (p.beds || '?').toString(), recent, scale: scaleVal };
 
         const tenureText = p.tenure
             ? p.tenure.charAt(0).toUpperCase() + p.tenure.slice(1).toLowerCase()
