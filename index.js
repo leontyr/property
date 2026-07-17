@@ -3,6 +3,32 @@ let all_properties = typeof window_properties !== 'undefined' ? window_propertie
 let markers = [];
 let infoWindow;
 
+// ── Favourites (persisted in localStorage) ───────────────────────────────────
+const FAV_KEY = 'property_favourites';
+let favourites = new Set(JSON.parse(localStorage.getItem(FAV_KEY) || '[]'));
+
+function isFav(pid) { return favourites.has(String(pid)); }
+
+function toggleFav(pid, event) {
+    if (event) event.stopPropagation();
+    pid = String(pid);
+    if (favourites.has(pid)) {
+        favourites.delete(pid);
+    } else {
+        favourites.add(pid);
+    }
+    localStorage.setItem(FAV_KEY, JSON.stringify([...favourites]));
+    const faved = favourites.has(pid);
+    document.querySelectorAll(`.fav-btn[data-pid="${pid}"]`).forEach(btn => {
+        btn.textContent = faved ? '❤️' : '🤍';
+        btn.title = faved ? 'Remove favourite' : 'Add favourite';
+        btn.classList.toggle('is-fav', faved);
+    });
+    document.querySelectorAll(`.list-item[data-pid="${pid}"]`).forEach(el => {
+        el.classList.toggle('list-item--fav', faved);
+    });
+}
+
 function fmt(n) {
     if (n == null) return '—';
     return '£' + Math.round(n).toLocaleString('en-GB');
@@ -72,12 +98,14 @@ async function initMap() {
     const maxPrice = parseInt(urlParams.get('price_max')) || 1500000;
     const chainFreeOnly = urlParams.get('chain_free_only') === '1';
     const gardenFacing = urlParams.get('garden_facing') || '';
+    const favsOnly = urlParams.get('favs_only') === '1';
 
     document.getElementById('school_max').value = maxSchool;
     document.getElementById('office_max').value = maxOffice;
     document.getElementById('price_max').value = maxPrice;
     document.getElementById('chain_free_only').checked = chainFreeOnly;
     document.getElementById('garden_facing').value = gardenFacing;
+    document.getElementById('favs_only').checked = favsOnly;
 
     function secsToText(s) {
         const m = Math.round(s / 60);
@@ -91,7 +119,8 @@ async function initMap() {
         (p.office_commute_seconds == null || p.office_commute_seconds <= maxOffice) &&
         (p.listing_price == null || p.listing_price <= maxPrice) &&
         (!chainFreeOnly || p.chain_free === true) &&
-        (!gardenFacing || p.garden_facing === gardenFacing)
+        (!gardenFacing || p.garden_facing === gardenFacing) &&
+        (!favsOnly || isFav(p.property_id))
     );
 
     filtered.sort((a, b) => (a.school_commute_seconds || 99999) - (b.school_commute_seconds || 99999));
@@ -169,8 +198,11 @@ async function initMap() {
             ? `<a href="${p.detail_url}" target="_blank"><img src="${p.thumbnail_url}" style="width:100%;border-radius:4px;margin-bottom:6px;display:block;" loading="lazy"/></a>`
             : '';
 
+        const favBtnPopup = `<button class="fav-btn${isFav(p.property_id) ? ' is-fav' : ''}" data-pid="${p.property_id}" onclick="toggleFav('${p.property_id}', event)" title="${isFav(p.property_id) ? 'Remove favourite' : 'Add favourite'}" style="position:absolute;top:6px;right:6px;">${isFav(p.property_id) ? '❤️' : '🤍'}</button>`;
+
         const infoContent = `
-            <div style="max-width:280px;font-family:sans-serif;font-size:13px;line-height:1.5;">
+            <div style="max-width:280px;font-family:sans-serif;font-size:13px;line-height:1.5;position:relative;">
+                ${favBtnPopup}
                 ${thumbHtml}<a href="${p.detail_url}" target="_blank" style="font-size:1.1em;font-weight:700;color:#0066cc;">${fmt(p.listing_price)}</a>
                 <span style="margin-left:6px;color:#555;">${p.beds || '?'} bed · ${p.baths || '?'} bath · ${tenureText}${floorText}</span><br>
                 <span style="color:#333;">${p.address || ''}</span>${chainBadge}<br>
@@ -194,8 +226,10 @@ async function initMap() {
 
         // Sidebar list item
         const item = document.createElement('div');
-        item.className = 'list-item';
+        item.className = 'list-item' + (isFav(p.property_id) ? ' list-item--fav' : '');
+        item.dataset.pid = p.property_id;
         item.innerHTML = `
+            <button class="fav-btn${isFav(p.property_id) ? ' is-fav' : ''}" data-pid="${p.property_id}" onclick="toggleFav('${p.property_id}', event)" title="${isFav(p.property_id) ? 'Remove favourite' : 'Add favourite'}">${isFav(p.property_id) ? '❤️' : '🤍'}</button>
             ${p.thumbnail_url ? `<img src="${p.thumbnail_url}" style="width:100%;border-radius:4px;margin-bottom:4px;display:block;" loading="lazy"/>` : ''}
             <h3><a href="${p.detail_url}" target="_blank" style="color:inherit;text-decoration:none;">${fmt(p.listing_price)}</a>${chainBadge}</h3>
             <p style="margin:2px 0;">${p.address || ''}</p>
